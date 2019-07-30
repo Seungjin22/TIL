@@ -1,0 +1,23 @@
+h1 {
+    color:slateblue;
+    font-size: 50%;
+}
+
+div {
+    color: salmon;
+    font-size: 50%
+}
+
+ul {
+    color: rgb(48, 150, 66);
+    font-size: 2rem
+}
+/* 2rem이니까 기본 16px의 두 배 -> 32px */
+
+div > h2 {
+    color: sandybrown;
+    font-size: 5em;
+}
+/* em은 상속의 영향을 받음
+div는 브라우저 기준이니까 16px(기본)의 50%인 8px
+em은 상속(여기서는 div)의 영향을 받음 ==> 5em = 500% ==> 8*5 = 40px */

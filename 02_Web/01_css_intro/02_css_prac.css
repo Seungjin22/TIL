@@ -1,0 +1,11 @@
+h1 {
+    background-color: salmon;
+    color: darkcyan;
+    font-size: 150px
+}
+
+p {
+    background-color: darkcyan;
+    color: salmon;
+    font-size: 100px
+}

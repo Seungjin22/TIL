@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="06_box_model_2.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--display-->
+    <!--1. block level element-->
+    <h1>
+        이것은 block 요소, 기본적으로 너비의 100% 차지
+    </h1>
+
+    <div>
+        너비가 정해지면 나머지를 margin으로!
+    </div>
+        
+    <div id="div-1">
+        block의 오른쪽 마진을 auto로 주면 왼쪽으로 붙고
+    </div>
+
+    <div id="div-2">
+        block의 왼쪽 마진을 auto로 주면 오른쪽으로 붙는다.
+    </div>
+
+    <div id="div-3">
+        block의 왼쪽/오른쪽 마진을 auto로 주면 가운데 정렬
+    </div>
+
+    <div id="div-4">
+        중앙정렬은 그냥 margin auto로 하면 됩니다.
+    </div>
+    <hr>
+
+    <!--2. inline level element-->
+    <span>인라인 요소</span>
+    <input type="text" placeholder="텍스트를 입력하세요.">
+    <input type="date">
+    <hr>
+    
+    <!--3. inline-block element-->
+    <p>
+        p태그는 원래 block level 요소지요?
+    </p>
+    <p>
+        이제는 inline-block 요소가 되어 붙을 거에여.
+    </p>
+    <hr>
+
+    <!--4. none-->
+    <div id="div-5">
+        이건 display none 속성입니다. 요소가 보이지도 않고 영역도 차지하지 않아요.
+    </div>
+    <hr>
+
+    <!--visibility-->
+    <!--1. visible ==> 기본값-->
+    <!--2. hidden-->
+    <div id="div-6">
+        이건 해당 요소를 안보이게 하지요.
+        display none과 다른건 이 친구는 공간을 차지합니다!(기둥 뒤 공간 있어요!)
+    </div>
+    <hr>
+    
+</body>
+</html>

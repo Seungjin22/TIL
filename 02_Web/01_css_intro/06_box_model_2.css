@@ -1,0 +1,41 @@
+div {
+    width: 100px;
+    height: 100px
+}
+/* div를 이렇게 지정하면 나머지 부분을 margin으로 만들어버림 */
+
+#div-1 {
+    margin-right: auto;
+}
+
+#div-2 {
+    margin-left: auto;
+}
+
+#div-3 {
+    margin-right: auto;
+    margin-left: auto
+}
+
+#div-4 {
+    margin: auto;
+}
+
+p {
+    display: inline-block;
+}
+/* p태그가 inline-block 요소가 되어 서로 붙게끔! */
+
+#div-5 {
+    display: none;
+}
+/* 영역도 사라짐. 공간 자체가 없음 */
+
+#div-6 {
+    visibility: hidden;
+}
+
+body {
+    /* background-image: url("images/ariel.jfif") */
+    background-color: olivedrab
+}

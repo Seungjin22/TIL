@@ -1,0 +1,25 @@
+/* * {
+    color: darkolivegreen;
+    font-size: 25px;
+} */
+
+/* ol, ul {
+    list-style-type: none; 
+}
+
+a {
+    text-decoration: none;
+} */
+
+/* .favorite {
+    color: olivedrab;
+}
+
+#title {
+    color: darkorange;
+} */
+
+/* 직계자식만 선택 */
+ol > li {
+    color: crimson;
+}
