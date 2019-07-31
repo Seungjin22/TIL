@@ -1,0 +1,15 @@
+#font1 {
+    font-size: 30px;
+    font-family: 'PT Serif', serif;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+#font2 {
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-align: center;
+}
