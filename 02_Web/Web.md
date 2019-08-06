@@ -417,7 +417,7 @@ Content : 실제 내용이 위치
 
 - background
 
-  - background-image
+  - background-image : url('')
   - background-color
 
 
@@ -709,3 +709,30 @@ grid: 격자, 모눈
 
 
 ml : margin left
+
+
+
+
+
+
+
+
+
+```html
+display: flex;
+flex-direction: row;
+				row-reverse;
+				column;
+				column-reverse;
+
+flex-wrap: wrap; ==> 창 줄이면 아래로 쌓임		(기본 설정은 nowrap)
+		   wrap-reverse; ==> 위로 쌓임
+```
+
+
+
+!important 는 최강자! 다 비켜!!
+
+
+
+반응형 웹 : 사이즈 줄이면 화면 구성 변화

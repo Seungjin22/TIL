@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        h2 {
+            color: purple;
+        }
+
+        /* 최대 1024px 넘지 않을 때 적용 */
+        @media (max-width: 1024px) {
+            h2 {
+                color: salmon;
+            }
+        }
+
+        /* 최소 768px보다 클 때 적용 */
+        @media (min-width: 768px) {
+            h1{
+                color: palevioletred;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My media Query</h1>
+    <h2>My media Query2</h2>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<form action="/user_create/" method="POST">
+    {% csrf_token %} <!-- Cross Site Request Forgery 토큰 필수! -->
+    이름: <input type="text" name="name">
+    비밀번호: <input type="password" name="pwd">
+    <input type="submit">
+</form>

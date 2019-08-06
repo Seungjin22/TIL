@@ -1,0 +1,17 @@
+<h1>로또를또로또?</h1>
+<h2>나의 번호 = {{ lottos }}</h2>
+{% for lotto in lottos %}
+    {% if lotto in real_lottos %}
+        <h2>{{ lotto }} 당첨</h2>
+    {% else %}
+        <h2>{{ lotto }} 꽝!!!!</h2>
+    {% endif %}
+{% endfor %}
+<hr>
+
+<h2>로또 번호 비교</h2>
+{% if lottos == real_lottos %}
+    <p>퇴사 가즈아~~!!!</p>
+{% else %}
+    <p>싸피 충성충성!</p>
+{% endif %}

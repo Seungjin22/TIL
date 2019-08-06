@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 6. 상위 객체에 의한 상속된 속성 */
+
+        div {
+            color: red;
+        }
+
+        /* 5. 태그 이름으로 지정한 속성 */
+
+        h1 {
+            color: blue;
+        }
+
+        /* 4. 클래스 이름으로 지정한 속성 */
+
+        .cool {
+            color: brown;
+        }
+
+        /* 3. id로 지정한 속성 */
+
+        #coldbrew {
+            color: olivedrab;
+        }
+
+        /* 2. HTML에서 inline styling을 한 경우 */
+        /* style="color: plum;" */
+
+        /* 1. (최강자) 속성값 뒤에 !important를 붙인 속성 */
+        h1 {
+            color: black !important
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="coldbrew" class="cool" style="color: plum;">아이스 콜드브루 라떼</h1>
+    </div>
+</body>
+</html>
