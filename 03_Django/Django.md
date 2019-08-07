@@ -26,7 +26,7 @@ django 성격
 
 ex) 공식 문서가 정말 잘되어 있음
 
-django built-in template tags and filters 참고
+'django built-in template tags and filters' 참고
 
 
 
@@ -64,7 +64,9 @@ M: 데이터를 관리
 
    `source venv/Scripts/activate`
 
-3. 확인하기 위해 pip list
+3. 확인하기 위해 
+
+   `pip list`
 
 4. 프로젝트 생성
 
@@ -225,8 +227,6 @@ def pong(request):
 <h1>Ping-Pong : {{ word }}</h1>
 ```
 
-
-
 ```html
 <!-- p탭 안에서는 아무리 Enter 쳐도 띄어쓰기 적용 X -->
 <p>
@@ -245,6 +245,21 @@ def pong(request):
 ```
 
 
+
+​	< Form tag에서 중요한 두 가지 >
+
+1. input 속성 (type은 디폴트, 중요한건 name='' 어떤 상자에 넣을 것인지)
+
+   `<input type="text" name="box">` 
+
+2. 메서드(GET 요청이 디폴트)
+
+   1. GET
+      - 데이터 조작 X,  ONLY 조회
+      - 주소창에 query ? 식으로 나옴
+   2. POST
+      - 데이터 조작 가해짐 ㅇㅇ
+      - 아무것도 나오지 않음 (body에 포함되어...)
 
 
 
@@ -308,5 +323,260 @@ urlpatterns = [
 
 <p>이름: {{ name }}</p>
 <p>비밀번호: {{ password }}</p>
+```
+
+
+
+
+
+VS Code
+
+code . 은 씹히는 현상 발생...!
+
+open with code(오른쪽 마우스) 로 열면 괜춘!!
+
+
+
+## 데이터베이스(DB)
+
+: **체계화된** 데이터의 모임
+
+​	몇 개의 자료 파일을 조직적으로 모아둔 것
+
+
+
+RDBMS(관계형데이터베이스 관리 시스템)
+
+관계형 모델을 기반으로 하는 데이터베이스 관리시스템
+
+- SQLite
+  - 서버가 아닌 응용 프로그램에 넣어 사용하는 비교적 가벼운 DB
+
+
+
+< 데이터베이스 용어 >
+
+- 스키마
+
+  : 데이터베이스에서 자료의 구조, 표현방법, 관계등을 정의한 구조.
+
+- 테이블(table)
+
+  : 열(컬럼/필드)과 행(레코드/값)의 모델을 사용해 조직된 데이터 요소들의 집합. (엑셀 sheet와 유사)
+
+    SQL 데이터베이스에서는 테이블을 관계라고도 함.
+
+- 열(column)
+
+  : 각 열에는 고유한 데이터 형식이 지정된다. ex) INTEGER, TEXT, NULL 등
+
+- 행(row), 레코드
+
+  : 테이블의 데이터는 행에 저장.
+
+- PK(기본키)
+
+  : 각 행(레코드)의 고유값으로 Primary Key로 불림.
+
+    반드시 설정해야하며, 데이터베이스 관리 및 관계 설정시 주요하게 활용됨.
+
+
+
+SQL(Structured Query Language)
+
+: 관계형 데이터베이스 관리시스템의 데이터 관리하기 위해 설계된 특수 목적의 프로그래밍 언어
+
+
+
+ORM
+
+CRUD (Create Read Update Delete)
+
+
+
+SQL	CRUD
+
+SELECT	READ
+
+INSERT INTO	CREATE
+
+UPDATE	UPDATE
+
+DELETE	DELETE
+
+
+
+파이썬은 모든 것이 객체...
+
+DB의 행, 테이블도 객체화 해볼 수 있지 않을까?
+
+==> ORM(Object-Relational Mapping)
+
+ORM은 객체 지향 프로그래밍 언어를 사용하여 호환되지 않는 유형의 시스템간(Django - SQL)에 데이터를 변환하는 프로그래밍 기술
+
+
+
+
+
+make migrations 까지는 DB에 적용되지 않은 상태!
+
+=> 설계도를 만들고 이거 맞아? 물어보는 단계!
+
+
+
+```python
+from django.db import models
+
+class Article(models.Model):
+    title = models.CharField(max_length=10) # 제목 너무 길어지지 않도록
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+```
+
+auto_now_add
+
+auto_now
+
+헷갈리기 딱 좋음
+
+
+
+   ★ 3 단계 ★
+
+1. models.py에 테이블 정의한다.
+
+2. make migrations을 통해 설계도를 만든다. ==> 앱 등록!!!!!!!!!! 잊지말아유~
+
+   `$ python manage.py makemigrations`
+
+3. migrate를 통해 데이터베이스에 반영한다.
+
+   `$ python manage.py migrate`
+
+
+
+쉘에 접근하는 방법
+
+`$ python manage.py shell`
+
+
+
+```
+$ python manage.py shell
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from articles.models import Article
+>>> Article.objects.all()			==> 나 이거 좀 다 주세요! objects는 번역기같은 존재
+<QuerySet []>						==> 아직 아무것도 없는 상태 (빈 DB)
+
+# .all()은 아무것도 없는 상태에도 빈 QuerySet [] 보여줌
+
+>>> article = Article()				==> 방법(1) 따로따로!  인스턴스 생성
+>>> article.title = 'first'
+>>> article.content = 'django!'
+>>> article
+<Article: Article object (None)>
+>>> article.save()					==> save 해줘야!!!! 값이 들어감
+>>> article
+<Article: Article object (1)>
+>>> article.title
+'first'
+>>> article.content
+'django!'
+>>> article.created_at
+datetime.datetime(2019, 8, 7, 7, 9, 45, 890128, tzinfo=<UTC>)
+
+>>> article = Article(title='second', content='django!') ==> 방법(2) 한 번에 주룩~
+>>> article
+<Article: Article object (None)>
+>>> article.save()
+>>> article
+<Article: Article object (2)>
+>>> article.title
+'second'
+>>> Article.objects.all()
+<QuerySet [<Article: Article object (1)>, <Article: Article object (2)>]>
+
+>>> Article.objects.create(title='third', content='django!') ==> 방법(3) save까지 한 번에!!
+<Article: Article object (3)>
+```
+
+근데 상태가 너무 마음에 안들잖아~
+
+사람이 보기 힘들어!! ㅠㅠ
+
+==> `__str__` 매직 메서드 사용해보자! 우리가 보기 편하게!
+
+```python
+from django.db import models
+
+class Article(models.Model):
+    title = models.CharField(max_length=10) # 제목 너무 길어지지 않도록
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.id}번 글 - {self.title}: {self.content}'
+```
+
+```
+$  python manage.py shell
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from articles.models import Article		==> shell 새로 켤 때마다 불러오기! 잊지마유~
+>>> articles = Article.objects.all()
+>>> articles
+<QuerySet [<Article: 1번 글 - first: django!>, <Article: 2번 글 - second: django!>, <Article: 3번 글 - third: django!>, <Article: 4번 글 - fourth: django!>]>
+
+
+>>> type(articles)
+<class 'django.db.models.query.QuerySet'>		==> 얘는 QuerySet 리스트처럼 생긴...
+
+
+>>> Article.objects.create(title='first', content='hahaha')
+<Article: 5번 글 - first: hahaha>
+>>> articles = Article.objects.filter(title='first')	==> .filter(필터링 조건)
+>>> articles
+<QuerySet [<Article: 1번 글 - first: django!>, <Article: 5번 글 - first: hahaha>]>
+
+
+>>> Article.objects.create(title = 'first', content = 'vacation')
+<Article: 6번 글 - first: vacation>
+>>> article = Article.objects.filter(title='first').first()
+											==> 메서드 체이닝(Method Chaining)
+>>> article
+<Article: 1번 글 - first: django!>			==> first()랑 last()만 가능!!!
+>>> article = Article.objects.filter(title='first').last()
+>>> article
+<Article: 6번 글 - first: vacation>
+
+>>> Article.objects.get(pk=3)		==> .get() 사용해서 pk가 3인 값 가져오기
+<Article: 3번 글 - third: django!>
+
+>>> Article.objects.get(title='first')  ==> title='first'인게 3개가 있어!!! ERROR-_-
+Traceback (most recent call last):				.get()은 무조건 하나인 걸로! (primary key)
+  File "<console>", line 1, in <module>
+  File "C:\Users\student\TIL\03_Django\02_django_query\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\student\TIL\03_Django\02_django_query\venv\lib\site-packages\django\db\models\query.py", line 412, in get
+    (self.model._meta.object_name, num)
+articles.models.Article.MultipleObjectsReturned: get() returned more than one Article -- it returned 3!
+
+
+>>> Article.objects.get(pk=10)		==> 없는 경우 가져올때, 필터 사용하면 에러 X
+Traceback (most recent call last):	   => .get()의 경우 지금처럼 에러!(무조건 하나인 값 넣기)
+  File "<console>", line 1, in <module>
+  File "C:\Users\student\TIL\03_Django\02_django_query\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\student\TIL\03_Django\02_django_query\venv\lib\site-packages\django\db\models\query.py", line 408, in get
+    self.model._meta.object_name
+articles.models.Article.DoesNotExist: Article matching query does not exist.
+
+>>> Article.objects.filter(pk=10)	==> .filter()의 경우에는 에러 없음
+<QuerySet []>						무조건 return이 있어야!!! 몇 개인지 보장 불가능(by.ORM)
 ```
 
