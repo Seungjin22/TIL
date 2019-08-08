@@ -401,24 +401,12 @@ CRUD (Create Read Update Delete)
 
 
 
-|     SQL     | CRUD   |
-| :---------: | ------ |
-|   SELECT    | READ   |
+|     SQL     |  CRUD  |
+| :---------: | :----: |
+|   SELECT    |  READ  |
 | INSERT INTO | CREATE |
 |   UPDATE    | UPDATE |
 |   DELETE    | DELETE |
-
-|SQL | CRUD|
-
-===========
-
-SELECT	READ
-
-INSERT INTO	CREATE
-
-UPDATE	UPDATE
-
-DELETE	DELETE
 
 
 
