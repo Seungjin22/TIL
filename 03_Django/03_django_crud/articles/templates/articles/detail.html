@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1 class="text-center">DETAIL</h1>
+    <h2>{{ article.pk }}번글</h2>
+    <P>글 제목: {{ article.title }}</P>
+    <P>글 내용: {{ article.content }}</P>
+    <P>글 작성 시각: {{ article.created_at }}</P>
+    <P>글 수정 시각: {{ article.updated_at }}</P>
+    <hr>
+    <a href="/articles/{{ article.pk }}/delete/">[글 삭제]</a>
+    <a href="/articles/">[메인 페이지로 가기]</a>
+{% endblock %}
