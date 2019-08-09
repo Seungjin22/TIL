@@ -868,4 +868,69 @@ views.py 윗부분
 
 from .models import Article
 
-.models 대신에 . 을 쓰면 어떨까?
+.models 대신에 . 을 쓰면 어떨까? / 안돼~ from까지가 ~에서 가져온다고 생각해.
+
+
+
+```python
+# admin.py
+
+from django.contrib import admin
+from .models import Student
+
+admin.site.register(Student)
+```
+
+==> admin.py에 이렇게 등록해줘야 서버에 뜸
+
+
+
+---
+
+글 하나하나 띄우기(R) / 삭제(D) / 수정(U)
+
+detail은 하나하나 세부적인 글 보여주기 위해 필요했음
+
+edit 으로 보낸 후 수정한걸 update로 보내줘야!
+
+` <a href="/articles/{{ article.pk }}/edit/" target="_blank">[글 수정]</a>`
+
+target="_blank"
+
+
+
+
+
+
+
+
+
+
+
+<ul class="navbar-nav mr-auto">
+
+​            <li class="nav-item active">
+
+​              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+
+​            </li>
+
+​            <li class="nav-item">
+
+​              <a class="nav-link" href="#">친구 평점 보러가기</a>
+
+​            </li>
+
+​            <li class="nav-item">
+
+​                <a class="nav-link" href="#">Log In</a>
+
+​            </li>
+
+
+
+
+
+
+
+ class="d-flex justify-content-center align-items-center"

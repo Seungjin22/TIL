@@ -8,6 +8,7 @@
     <P>글 작성 시각: {{ article.created_at }}</P>
     <P>글 수정 시각: {{ article.updated_at }}</P>
     <hr>
+    <a href="/articles/{{ article.pk }}/edit/" target="_blank">[글 수정]</a>
     <a href="/articles/{{ article.pk }}/delete/">[글 삭제]</a>
     <a href="/articles/">[메인 페이지로 가기]</a>
 {% endblock %}

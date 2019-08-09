@@ -32,3 +32,19 @@ def delete(request, pk):
     article.delete()
 
     return redirect('/articles/')
+
+def edit(request, pk):
+    article = Article.objects.get(pk=pk)
+    context = {
+        'article': article,
+    }
+    return render(request, 'articles/edit.html', context)
+
+def update(request, pk):
+    article = Article.objects.get(pk=pk)
+    
+    article.title = request.POST.get('title') # 수정한 글을 'title'이란 박스에 담아 전달
+    article.content = request.POST.get('content')
+    article.save()  # save는 절대로 절대로 잊어버리지말아죠~!!!
+
+    return redirect(f'/articles/{article.pk}/')
