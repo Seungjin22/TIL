@@ -1,5 +1,7 @@
 import sys
-sys.stdin = open("view_input.txt")
+sys.stdin = open("view_input.txt", "r") # 읽기
+sys.stdout = open("view_output.txt", "w") # 쓰기(결과물 파일 만들어줌)
+#위 세 줄은 제출할 땐 삭제해줘야!!
 
 T = 10
 
