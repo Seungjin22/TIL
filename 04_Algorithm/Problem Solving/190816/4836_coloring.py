@@ -19,3 +19,16 @@ for test_case in range(1, T+1):
                     count += 1
 
     print('#{} {}'.format(test_case, count))
+
+
+
+
+# 선생님 풀이
+
+for test_case in range(1, T+1):
+    data = [[0] * N for i in range(N)]
+    n = int(input())
+    cnt = 0
+
+    for k in range (n):
+        r1, c1, r2, c2, color = map(int, input().split())
