@@ -9,7 +9,7 @@ def palindrome(datas, N, M):
         for j in range(N - (M - 1)):
             flag = 1
             for z in range(M // 2):
-                if datas[i][j + z] != datas[i][j + M - 1 - z]:
+                if datas[i][j+z] != datas[i][j+M-1-z]:
                     flag = 0
                     break
             if flag:
@@ -21,7 +21,7 @@ def palindrome(datas, N, M):
         for j in range(N - (M - 1)):
             flag = 1
             for z in range(M // 2):
-                if datas[j + z][i] != datas[j + M - 1 - z][i]:
+                if datas[j+z][i] != datas[j+M-1-z][i]:
                     flag = 0
                     break
             if flag:
