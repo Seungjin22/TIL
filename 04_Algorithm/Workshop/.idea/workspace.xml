@@ -2,40 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49ae14ce-7d34-46ca-9461-f0e1171d00bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/Subset_Sum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/Subset_Sum2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/Subset_practice.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/array2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/binarySearch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/input.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/inputs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/selectionSort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/sequentialSearch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/0814/전치행렬.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/babygin_greedy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/bubble_sorting.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/counting_sorting.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/gravity.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/perm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/view_input.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/view_output.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01 List/view_teacher.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/.idea/02 String.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/atoi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/bit_encryption.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/itoa.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/ord.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/pattern_search.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/str_repr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02 String/string_reverse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Stack/.idea/03_Stack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../03_Stack/.idea/03_Stack.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../03_Stack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03_Stack/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AfterClass/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AfterClass/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Problem Solving/.idea/Problem Solving.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Problem Solving/.idea/Problem Solving.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Problem Solving/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Problem Solving/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Problem Solving/190820/4861_palindrome.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Problem Solving/190820/4861_palindrome.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0821_workshop.py" beforeDir="false" afterPath="$PROJECT_DIR$/0821_workshop.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,60 +19,78 @@
     <session id="-953353873">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="4" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="16" />
-          <entry key="txt" value="13" />
+          <entry key="py" value="18" />
+          <entry key="txt" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="13" />
-          <entry key="Python" value="16" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="1" />
-          <entry key="py" value="5992" />
+          <entry key="py" value="6569" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="5992" />
+          <entry key="Python" value="6569" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/0821_workshop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-              <folding>
-                <marker date="1566377792012" expanded="true" signature="485:656" ph="..." />
-              </folding>
+            <state relative-caret-position="-239">
+              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/Python35/Lib/codecs.py">
+        <entry file="file://$PROJECT_DIR$/0819_bonus_fly.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="291" selection-start-line="291" selection-end-line="291" />
+            <state relative-caret-position="240">
+              <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding>
+                <marker date="1566204726236" expanded="true" signature="94:417" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/0819_workshop.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/0819_bonus_fly.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -137,8 +127,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+    <option name="x" value="837" />
+    <option name="width" value="1089" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -166,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -177,11 +168,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Problem Solving" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -196,7 +186,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.0821_workshop">
+  <component name="RunManager" selected="Python.0819_bonus_fly">
     <configuration name="0819_bonus_fly" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Workshop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -311,10 +301,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.0819_bonus_fly" />
         <item itemvalue="Python.0821_workshop" />
         <item itemvalue="Python.0820_workshop2" />
         <item itemvalue="Python.0820_workshop" />
-        <item itemvalue="Python.0819_bonus_fly" />
         <item itemvalue="Python.0819_workshop" />
       </list>
     </recent_temporary>
@@ -336,12 +326,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24465811" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24446785" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3438178" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3394794" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39154014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -368,7 +358,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/0821_workshop.py</url>
-          <line>44</line>
+          <line>88</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
@@ -440,30 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/0819_bonus_fly.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/0819_bonus_fly.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-          <folding>
-            <marker date="1566204726236" expanded="true" signature="94:417" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/0819_workshop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/0820_workshop.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -507,13 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python35/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="291" selection-start-line="291" selection-end-line="291" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/0821_workshop.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4050">
@@ -523,11 +482,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/0821_workshop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="23" lean-forward="true" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        <state relative-caret-position="-239">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python35/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4365">
+          <caret line="291" selection-start-line="291" selection-end-line="291" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0819_bonus_fly.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0819_bonus_fly.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
-            <marker date="1566377792012" expanded="true" signature="485:656" ph="..." />
+            <marker date="1566204726236" expanded="true" signature="94:417" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0819_workshop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
