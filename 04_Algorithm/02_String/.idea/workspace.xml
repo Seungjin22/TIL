@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/ord.py" line="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abbaa35d-ea64-489d-8e5a-2544e0a00af9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Workshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Workshop/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="abbaa35d-ea64-489d-8e5a-2544e0a00af9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +41,15 @@
         <counts>
           <entry key="PLAIN_TEXT" value="20" />
           <entry key="Python" value="2101" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1704450384">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -84,7 +90,7 @@
         <entry file="file://$PROJECT_DIR$/atoi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding>
                 <marker date="1566182487754" expanded="true" signature="17:22" ph="..." />
               </folding>
@@ -96,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/itoa.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="37" />
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="37" />
               <folding>
                 <marker date="1566190537604" expanded="true" signature="12:246" ph="..." />
               </folding>
@@ -108,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/pattern_search.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
               <folding>
                 <marker date="1566195592922" expanded="true" signature="21:26" ph="..." />
                 <marker date="1566195592922" expanded="true" signature="305:580" ph="..." />
@@ -179,7 +185,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Workshop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -383,7 +389,7 @@
     <entry file="file://$PROJECT_DIR$/atoi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
           <folding>
             <marker date="1566182487754" expanded="true" signature="17:22" ph="..." />
           </folding>
@@ -393,7 +399,7 @@
     <entry file="file://$PROJECT_DIR$/itoa.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="37" />
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="5" selection-end-column="37" />
           <folding>
             <marker date="1566190537604" expanded="true" signature="12:246" ph="..." />
           </folding>
@@ -410,7 +416,7 @@
     <entry file="file://$PROJECT_DIR$/pattern_search.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
           <folding>
             <marker date="1566195592922" expanded="true" signature="21:26" ph="..." />
             <marker date="1566195592922" expanded="true" signature="305:580" ph="..." />

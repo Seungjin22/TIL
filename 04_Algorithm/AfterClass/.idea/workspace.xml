@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb71244d-d363-4784-9719-5003ad7ab9d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../03_Stack/.idea/03_Stack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../03_Stack/.idea/03_Stack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_Stack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../03_Stack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../02_String/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02_String/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Problem Solving/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Problem Solving/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Workshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Workshop/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Workshop/0821_workshop.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Workshop/0821_workshop.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +16,10 @@
     <session id="-726958093">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,10 +54,7 @@
             <entry file="file://$PROJECT_DIR$/For IM/190822/flykiller.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
-                  <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-                  <folding>
-                    <marker date="1566471757953" expanded="true" signature="107:213" ph="..." />
-                  </folding>
+                  <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -70,9 +64,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="60">
                   <caret line="4" selection-start-line="4" selection-end-line="4" />
-                  <folding>
-                    <marker date="1566474098963" expanded="true" signature="97:402" ph="..." />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -80,11 +71,11 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/For IM/190822/harvesting_input.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-225">
+                <state relative-caret-position="15">
                   <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="3" />
                 </state>
               </provider>
@@ -123,10 +114,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="42" />
-    <option name="y" value="104" />
-    <option name="width" value="1089" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="581" />
+    <option name="width" value="809" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -173,7 +163,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -330,9 +320,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="104" width="1089" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17507136" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09694415" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -423,20 +413,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/For IM/190822/harvesting_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/For IM/190822/flykiller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <marker date="1566471757953" expanded="true" signature="107:213" ph="..." />
-          </folding>
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -444,9 +424,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1566474098963" expanded="true" signature="97:402" ph="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/For IM/190822/harvesting_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
