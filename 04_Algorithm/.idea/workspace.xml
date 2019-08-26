@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c6e7edd-69b7-4b31-bfab-288e802c5d7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_String/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/02_String/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/03_Stack/두더지굴.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Stack/두더지굴.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AfterClass/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AfterClass/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Workshop/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,86 +53,75 @@
     <session id="907933391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="5" />
-          <entry key="txt" value="2" />
+          <entry key="py" value="17" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Python" value="5" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Python" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="393" />
+          <entry key="py" value="4822" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="393" />
+          <entry key="Python" value="4822" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8194444">
+    <splitter split-orientation="horizontal" split-proportion="0.6494662">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190822/flykiller.py">
+            <entry file="file://$PROJECT_DIR$/Workshop/0826_workshop.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="20" selection-start-line="20" selection-end-line="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190822/harvesting.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" selection-start-line="11" selection-end-line="11" />
+                <state relative-caret-position="180">
+                  <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/03_Stack/두더지굴.py">
+            <entry file="file://$PROJECT_DIR$/04_Stack2/연습문제1.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-                  <folding>
-                    <marker date="1566541530190" expanded="true" signature="57:152" ph="..." />
-                  </folding>
+                <state relative-caret-position="210">
+                  <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Workshop/0823_workshop.py">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/03_Stack/두더지.txt">
-              <provider selected="true" editor-type-id="text-editor" />
+            <entry file="file://$PROJECT_DIR$/Workshop/0826_workshop.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="20" selection-start-line="20" selection-end-line="20" />
+                </state>
+              </provider>
             </entry>
           </file>
         </leaf>
@@ -164,14 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1. List/view.py" />
-        <option value="$PROJECT_DIR$/1. List/view_teacher.py" />
-        <option value="$PROJECT_DIR$/Problem Solving/input.txt" />
-        <option value="$PROJECT_DIR$/Problem Solving/minmax.py" />
-        <option value="$PROJECT_DIR$/Problem Solving/4834_input.txt" />
-        <option value="$PROJECT_DIR$/Problem Solving/4835_sum.txt" />
-        <option value="$PROJECT_DIR$/Problem Solving/4835_sum.py" />
-        <option value="$PROJECT_DIR$/Problem Solving/4831_input.txt" />
         <option value="$PROJECT_DIR$/Problem Solving/4834_numbercard.py" />
         <option value="$PROJECT_DIR$/Problem Solving/0813_workshop.txt" />
         <option value="$PROJECT_DIR$/Problem Solving/0813_workshop.py" />
@@ -214,22 +191,32 @@
         <option value="$PROJECT_DIR$/Problem Solving/4843_specialarray.py" />
         <option value="$PROJECT_DIR$/Problem Solving/4836_coloring.py" />
         <option value="$PROJECT_DIR$/1. List/0814/input.py" />
+        <option value="$PROJECT_DIR$/04_Stack2/연습문제1.py" />
+        <option value="$PROJECT_DIR$/04_Stack2/연습문제2.py" />
+        <option value="$PROJECT_DIR$/04_Stack2/순열_재귀.py" />
+        <option value="$PROJECT_DIR$/04_Stack2/순열_babygin.py" />
+        <option value="$PROJECT_DIR$/04_Stack2/분할정복.py" />
+        <option value="$PROJECT_DIR$/04_Stack2/분할정복2.py" />
+        <option value="$PROJECT_DIR$/Workshop/0826_workshop.txt" />
+        <option value="$PROJECT_DIR$/Workshop/0826_workshop.py" />
         <option value="$PROJECT_DIR$/03_Stack/두더지굴.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
+    <option name="x" value="492" />
+    <option name="y" value="4" />
+    <option name="width" value="1289" />
     <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,10 +229,44 @@
               <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="03_Stack" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="04_Stack2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
+              <item name="190813" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
+              <item name="190816" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
+              <item name="190820" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Workshop" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,6 +293,48 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.두더지굴">
+    <configuration name="분할정복" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/04_Stack2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_Stack2/분할정복.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="0826_workshop" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Workshop" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Workshop/0826_workshop.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="두더지굴" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="work" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -293,7 +356,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4828_minmax" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="분할정복2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="work" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,11 +364,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/04_Stack2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/4828_minmax.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_Stack2/분할정복2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,7 +377,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4836_coloring" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="순열_babygin" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="work" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -322,53 +385,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/04_Stack2" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/4836_coloring.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4839_binarysearch" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/4839_binarysearch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4843_specialarray" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/4843_specialarray.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_Stack2/순열_babygin.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -378,19 +399,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.4836_coloring" />
-      <item itemvalue="Python.4839_binarysearch" />
-      <item itemvalue="Python.4843_specialarray" />
-      <item itemvalue="Python.4828_minmax" />
+      <item itemvalue="Python.순열_babygin" />
+      <item itemvalue="Python.분할정복2" />
+      <item itemvalue="Python.분할정복" />
+      <item itemvalue="Python.0826_workshop" />
       <item itemvalue="Python.두더지굴" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.두더지굴" />
-        <item itemvalue="Python.4828_minmax" />
-        <item itemvalue="Python.4836_coloring" />
-        <item itemvalue="Python.4843_specialarray" />
-        <item itemvalue="Python.4839_binarysearch" />
+        <item itemvalue="Python.0826_workshop" />
+        <item itemvalue="Python.분할정복2" />
+        <item itemvalue="Python.분할정복" />
+        <item itemvalue="Python.순열_babygin" />
       </list>
     </recent_temporary>
   </component>
@@ -408,15 +429,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="492" y="4" width="1289" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3916991" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18065548" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3261105" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33077765" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39824945" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27820373" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39759037" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -459,6 +480,21 @@
           <line>6</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/04_Stack2/연습문제2.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/04_Stack2/연습문제2.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/04_Stack2/순열_재귀.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -487,21 +523,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Problem Solving/4831_input.txt" />
-    <entry file="file://$PROJECT_DIR$/Problem Solving/0813_workshop.txt" />
-    <entry file="file://$PROJECT_DIR$/Problem Solving/4835_input.txt" />
-    <entry file="file://$PROJECT_DIR$/Problem Solving/4834_numbercard.py" />
-    <entry file="file://$PROJECT_DIR$/Problem Solving/4835_sum.py" />
-    <entry file="file://C:/Program Files/Python35/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="291" selection-start-line="291" selection-end-line="291" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1. List/0814/array2.py" />
-    <entry file="file://$PROJECT_DIR$/1. List/0814/sequentialSearch.py" />
-    <entry file="file://$PROJECT_DIR$/1. List/0814/selectionSort.py" />
     <entry file="file://$PROJECT_DIR$/1. List/0814/binarySearch.py" />
     <entry file="file://$PROJECT_DIR$/1. List/0814/전치행렬.py" />
     <entry file="file://$PROJECT_DIR$/Problem Solving/0814_workshop.txt" />
@@ -541,12 +562,8 @@
     <entry file="file://$PROJECT_DIR$/02_String/pattern_search.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190822/flykiller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/03_Stack/두더지.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190822/harvesting.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -555,25 +572,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py">
+    <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190822/flykiller.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Stack2/순열_재귀.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <marker date="1566796954890" expanded="true" signature="16:21" ph="..." />
+            <marker date="1566796954890" expanded="true" signature="99:104" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Stack2/순열_babygin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <marker date="1566798538633" expanded="true" signature="123:453" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Stack2/분할정복.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding>
+            <marker date="1566799548028" expanded="true" signature="26:27" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Stack2/분할정복2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <marker date="1566799663813" expanded="true" signature="26:31" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Workshop/0826_workshop.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Stack2/연습문제2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
+          <folding>
+            <marker date="1566794839869" expanded="true" signature="127:132" ph="..." />
+            <marker date="1566794839869" expanded="true" signature="378:408" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Workshop/0823_workshop.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Workshop/0826_workshop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03_Stack/두더지굴.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="135">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
-            <marker date="1566541530190" expanded="true" signature="57:152" ph="..." />
+            <marker date="1566810467937" expanded="true" signature="96:348" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03_Stack/두더지.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Stack2/연습문제1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
