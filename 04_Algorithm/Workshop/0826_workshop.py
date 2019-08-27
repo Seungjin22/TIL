@@ -41,7 +41,7 @@ for tc in range(1, 11):
                 result.append(a-b)
             elif m == '*':
                 result.append(a*b)
-            elif m == '/':
+            elif m == '//':
                 result.append(a/b)
 
     print('#{} {}'.format(tc, result.pop()))
