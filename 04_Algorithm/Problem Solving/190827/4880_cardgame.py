@@ -1,15 +1,6 @@
 import sys
 sys.stdin = open('4880_input.txt')
 
-# def game(result):
-#     if result[0] == '1':
-#         if result[-1] == '1':
-#
-#         elif result[-1] == '2':
-#             return result[-1]
-#         else:
-#             return result[0]
-
 def game(i, j):
     if i == j:
         return i
@@ -40,6 +31,5 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     cards = [0]+list(input().split())
-
 
     print('#{} {}'.format(tc, game(1, N)))

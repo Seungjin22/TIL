@@ -5,17 +5,13 @@ def coloring(x1, y1, x2, y2, color):
     global count
     for x in range(x1, x2+1):
         for y in range(y1, y2+1):
-            if paper[x][y] <= color:
-                flag = 1
-            else:
-                flag = 0
+            if paper[x][y] > color:
                 return
 
     for x in range(x1, x2 + 1):
         for y in range(y1, y2 + 1):
             paper[x][y] = color
     colors[color] = 0       # 인덴트 두 번 당김 확인하기
-
 
 T = int(input())
 for tc in range(1, T+1):

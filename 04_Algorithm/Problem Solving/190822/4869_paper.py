@@ -1,7 +1,14 @@
 import sys
 sys.stdin = open('4869_input.txt')
 
+def f(k):
+    if k <=1 :
+        return 1
+    else:
+        return f(k-1) + 2*f(k-2)
+
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
-    data = [[0 for _ in range(N)] for _ in range(20)]
+
+    print("#{} {}".format(tc, f(N // 10)))

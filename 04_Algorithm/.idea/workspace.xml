@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c6e7edd-69b7-4b31-bfab-288e802c5d7a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/work.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/work.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Stack/두더지굴.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Stack/두더지굴.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Workshop/0826_workshop.py" beforeDir="false" afterPath="$PROJECT_DIR$/Workshop/0826_workshop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py" beforeDir="false" afterPath="$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problem Solving/190822/4869_paper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problem Solving/190822/4869_paper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problem Solving/190827/4880_cardgame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problem Solving/190827/4880_cardgame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py" beforeDir="false" afterPath="$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/알고리즘.md" beforeDir="false" afterPath="$PROJECT_DIR$/알고리즘.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,98 +59,131 @@
     <session id="907933391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.2" value="4" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="30" />
-          <entry key="txt" value="20" />
+          <entry key="py" value="43" />
+          <entry key="txt" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Python" value="30" />
+          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="Python" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="5" />
-          <entry key="py" value="10064" />
-          <entry key="txt" value="15" />
+          <entry key="dummy" value="13" />
+          <entry key="py" value="13168" />
+          <entry key="txt" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Python" value="10064" />
+          <entry key="PLAIN_TEXT" value="95" />
+          <entry key="Python" value="13168" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.78852457">
+    <splitter split-orientation="horizontal" split-proportion="0.74059665">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4880_cardgame.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="101">
-                  <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+                <state relative-caret-position="345">
+                  <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/05_Queue/연습문제1-3.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/05_Queue/연습문제1-2.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/05_Queue/연습문제1.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
                   <folding>
-                    <marker date="1566903942680" expanded="true" signature="66:242" ph="..." />
-                    <marker date="1566903942680" expanded="true" signature="299:928" ph="..." />
+                    <marker date="1566961311167" expanded="true" signature="29:58" ph="..." />
+                    <marker date="1566961311167" expanded="true" signature="95:121" ph="..." />
+                    <marker date="1566961311167" expanded="true" signature="139:244" ph="..." />
+                    <marker date="1566961311167" expanded="true" signature="275:368" ph="..." />
+                    <marker date="1566961311167" expanded="true" signature="380:473" ph="..." />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py">
+            <entry file="file://$PROJECT_DIR$/05_Queue/선형Queue.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-                  <folding>
-                    <marker date="1566903152553" expanded="true" signature="95:437" ph="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190827/1954_snail.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-                  <folding>
-                    <marker date="1566906470279" expanded="true" signature="62:67" ph="..." />
-                  </folding>
+                <state relative-caret-position="210">
+                  <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py">
+            <entry file="file://$PROJECT_DIR$/05_Queue/연습문제3_BFS.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+                <state relative-caret-position="75">
+                  <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/03_Stack/두더지굴.py">
+            <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190828/1961_numarrayrotating.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
                   <folding>
-                    <marker date="1566905154667" expanded="true" signature="297:299" ph="..." />
+                    <marker date="1566992846186" expanded="true" signature="46:47" ph="..." />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/05_Queue/연습문제3_BFS.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="3" selection-start-column="3" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -158,10 +193,10 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4881_input.txt">
+            <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190828/1961_input.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+                <state relative-caret-position="794">
+                  <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -191,18 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/1. List/0814/selectionSort.py" />
-        <option value="$PROJECT_DIR$/Problem Solving/0814_input.txt" />
-        <option value="$PROJECT_DIR$/Problem Solving/0814_bonus_snail.txt" />
-        <option value="$PROJECT_DIR$/Problem Solving/0814_Bonus_Snail.py" />
-        <option value="$PROJECT_DIR$/AfterClass/536.py" />
-        <option value="$PROJECT_DIR$/AfterClass/0814/541.py" />
-        <option value="$PROJECT_DIR$/AfterClass/0814/542.py" />
-        <option value="$PROJECT_DIR$/AfterClass/0814/546.py" />
-        <option value="$PROJECT_DIR$/AfterClass/0814/547.py" />
-        <option value="$PROJECT_DIR$/AfterClass/0814/548.py" />
-        <option value="$PROJECT_DIR$/AfterClass/0814/130.py" />
-        <option value="$PROJECT_DIR$/AfterClass/0814/549.py" />
         <option value="$PROJECT_DIR$/AfterClass/0814/634.py" />
         <option value="$PROJECT_DIR$/AfterClass/0814/550.py" />
         <option value="$PROJECT_DIR$/AfterClass/0814/551.py" />
@@ -237,17 +260,29 @@
         <option value="$PROJECT_DIR$/AfterClass/For IM/190827/1954_input.txt" />
         <option value="$PROJECT_DIR$/Problem Solving/190827/arraysum.py" />
         <option value="$PROJECT_DIR$/Problem Solving/190827/4881_input.txt" />
-        <option value="$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py" />
         <option value="$PROJECT_DIR$/03_Stack/두더지굴.py" />
         <option value="$PROJECT_DIR$/AfterClass/For IM/190827/1954_snail.py" />
         <option value="$PROJECT_DIR$/Problem Solving/190827/4880_cardgame.py" />
+        <option value="$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py" />
+        <option value="$PROJECT_DIR$/Problem Solving/190822/4869_paper.py" />
+        <option value="$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py" />
+        <option value="$PROJECT_DIR$/05_Que/연습문제1.py" />
         <option value="$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py" />
+        <option value="$PROJECT_DIR$/05_Queue/연습문제1-3.py" />
+        <option value="$PROJECT_DIR$/05_Queue/연습문제1-2.py" />
+        <option value="$PROJECT_DIR$/05_Queue/연습문제1.py" />
+        <option value="$PROJECT_DIR$/05_Queue/선형Queue.py" />
+        <option value="$PROJECT_DIR$/05_Queue/BFS.py" />
+        <option value="$PROJECT_DIR$/05_Queue/연습문제3_BFS.txt" />
+        <option value="$PROJECT_DIR$/05_Queue/연습문제3_BFS.py" />
+        <option value="$PROJECT_DIR$/AfterClass/For IM/190828/1961_input.txt" />
+        <option value="$PROJECT_DIR$/AfterClass/For IM/190828/1961_numarrayrotating.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="685" />
-    <option name="width" value="1195" />
+    <option name="x" value="701" />
+    <option name="width" value="1179" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -258,13 +293,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="05_Queue" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
@@ -287,7 +326,20 @@
             <path>
               <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="AfterClass" type="462c0819:PsiDirectoryNode" />
+              <item name="For IM" type="462c0819:PsiDirectoryNode" />
+              <item name="190828" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
               <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
+              <item name="190822" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="04_Algorithm" type="b2602c69:ProjectViewProjectNode" />
@@ -304,6 +356,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -329,7 +382,112 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.4880_cardgame">
+  <component name="RunManager" selected="Python.1961_numarrayrotating">
+    <configuration name="연습문제1-2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05_Queue" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05_Queue/연습문제1-2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="연습문제1-3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05_Queue" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05_Queue/연습문제1-3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1961_numarrayrotating" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AfterClass/For IM/190828" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AfterClass/For IM/190828/1961_numarrayrotating.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="연습문제3_BFS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/05_Queue" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/05_Queue/연습문제3_BFS.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="4881_arraysum" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="work" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving/190827" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="두더지굴" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="work" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -343,111 +501,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03_Stack/두더지굴.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4874_Forth" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving/190827" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/190827/4874_Forth.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4875_maze" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving/190827" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/190827/4875_maze.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="4880_cardgame" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Problem Solving/190827" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Problem Solving/190827/4880_cardgame.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="두더지굴" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/03_Stack" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/03_Stack/두더지굴.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="coloring_square" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="work" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AfterClass/For IM/190827" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -457,19 +510,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.두더지굴" />
-      <item itemvalue="Python.4874_Forth" />
-      <item itemvalue="Python.4875_maze" />
-      <item itemvalue="Python.4880_cardgame" />
-      <item itemvalue="Python.coloring_square" />
+      <item itemvalue="Python.4881_arraysum" />
+      <item itemvalue="Python.연습문제1-3" />
+      <item itemvalue="Python.연습문제1-2" />
+      <item itemvalue="Python.연습문제3_BFS" />
+      <item itemvalue="Python.1961_numarrayrotating" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.4880_cardgame" />
-        <item itemvalue="Python.두더지굴" />
-        <item itemvalue="Python.coloring_square" />
-        <item itemvalue="Python.4875_maze" />
-        <item itemvalue="Python.4874_Forth" />
+        <item itemvalue="Python.1961_numarrayrotating" />
+        <item itemvalue="Python.연습문제3_BFS" />
+        <item itemvalue="Python.연습문제1-2" />
+        <item itemvalue="Python.연습문제1-3" />
+        <item itemvalue="Python.4881_arraysum" />
       </list>
     </recent_temporary>
   </component>
@@ -487,16 +540,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="685" y="0" width="1195" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="701" y="0" width="1179" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16681072" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16914988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3261105" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28258488" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39370933" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3932092" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -561,13 +613,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Problem Solving/190827/4880_cardgame.py</url>
-          <line>44</line>
+          <line>34</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py</url>
-          <line>9</line>
-          <option name="timeStamp" value="13" />
+          <url>file://$PROJECT_DIR$/AfterClass/For IM/190828/1961_numarrayrotating.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -609,17 +661,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AfterClass/0814/549.py" />
-    <entry file="file://$PROJECT_DIR$/AfterClass/0814/553.py" />
-    <entry file="file://$PROJECT_DIR$/AfterClass/0814/552.py" />
-    <entry file="file://$PROJECT_DIR$/AfterClass/0814/551.py" />
-    <entry file="file://$PROJECT_DIR$/AfterClass/0814/550.py" />
-    <entry file="file://$PROJECT_DIR$/AfterClass/0814/634.py" />
-    <entry file="file://$PROJECT_DIR$/Problem Solving/0814_Bonus_Snail.py" />
-    <entry file="file://$PROJECT_DIR$/1. List/0814/Subset_Sum.py" />
-    <entry file="file://$PROJECT_DIR$/Problem Solving/0814_workshop.py" />
-    <entry file="file://$PROJECT_DIR$/1. List/0814/Subset_Sum2.py" />
-    <entry file="file://$PROJECT_DIR$/1. List/0814/Subset_practice.py" />
     <entry file="file://$PROJECT_DIR$/Problem Solving/4837_subsetsum.py" />
     <entry file="file://$PROJECT_DIR$/Problem Solving/4837_input.txt" />
     <entry file="file://$PROJECT_DIR$/Problem Solving/4839_binarysearch.py" />
@@ -656,13 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -751,13 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4874_Forth.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4880_input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -772,17 +799,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4875_maze.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190827/1954_input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190827/1954_snail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <marker date="1566906470279" expanded="true" signature="62:67" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_Stack/두더지굴.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding>
+            <marker date="1566905154667" expanded="true" signature="297:299" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -793,51 +833,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03_Stack/두더지굴.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding>
-            <marker date="1566905154667" expanded="true" signature="297:299" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190827/1954_snail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding>
-            <marker date="1566906470279" expanded="true" signature="62:67" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190827/coloring_square.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <marker date="1566903152553" expanded="true" signature="95:437" ph="..." />
-          </folding>
+        <state relative-caret-position="465">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/4.+Stack1_실습/종이붙이기_재귀.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem Solving/190822/4869_paper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem Solving/190822/4871_graphpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4874_Forth.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4875_maze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4880_cardgame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="345">
+          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_Que/연습문제1.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_Queue/연습문제1-3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_Queue/연습문제1-2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_Queue/연습문제1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding>
-            <marker date="1566903942680" expanded="true" signature="66:242" ph="..." />
-            <marker date="1566903942680" expanded="true" signature="299:928" ph="..." />
+            <marker date="1566961311167" expanded="true" signature="29:58" ph="..." />
+            <marker date="1566961311167" expanded="true" signature="95:121" ph="..." />
+            <marker date="1566961311167" expanded="true" signature="139:244" ph="..." />
+            <marker date="1566961311167" expanded="true" signature="275:368" ph="..." />
+            <marker date="1566961311167" expanded="true" signature="380:473" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Problem Solving/190827/4881_arraysum.py">
+    <entry file="file://$PROJECT_DIR$/05_Queue/선형Queue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="210">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190828/1961_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_Queue/연습문제3_BFS.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AfterClass/For IM/190828/1961_numarrayrotating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding>
+            <marker date="1566992846186" expanded="true" signature="46:47" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05_Queue/연습문제3_BFS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>

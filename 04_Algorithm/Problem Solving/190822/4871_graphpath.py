@@ -3,7 +3,7 @@ sys.stdin = open('4871_input.txt')
 
 def path(i, G):
     if result[0] == 1:
-        return
+        return          # return한다고 끝나는게 X 한 칸 올라가는 것
     if i == G:
         result[0] = 1
     for j in range(len(data)):
