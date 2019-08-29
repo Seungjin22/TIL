@@ -4,7 +4,7 @@ def BFS(v):
     visited[v] = 1
     print(v, end=" ")
     while len(queue) != 0:
-        v = queue.pop()
+        v = queue.pop(0)
         for i in range(1, V+1):
             if G[v][i] and not visited[i]:
                 queue.append(i)
