@@ -30,3 +30,6 @@ for _ in range(10):
     else:
         result = 1
     print('#{} {}'.format(tc, result))
+
+
+    # DFS로도 풀어보기

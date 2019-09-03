@@ -43,7 +43,7 @@ for tc in range(1, T+1):
 
     area = 0
     for ans in range(0, len(result)-1, 2):
-        if area == result[ans] * result[ans+1]:
+        if area == result[ans] * result[ans+1] and result[ans-2] > result[ans]:
             result[ans], result[ans-2] = result[ans-2], result[ans]
             result[ans+1], result[ans-1] = result[ans-1], result[ans+1]
         area = result[ans] * result[ans+1]
@@ -52,3 +52,9 @@ for tc in range(1, T+1):
     for ans in result:
         print('{}'.format(ans), end=" ")
     print()
+
+
+
+
+# 선생님 풀이
+# while 문 두 개로 행열 찾기 & clear 시키기
