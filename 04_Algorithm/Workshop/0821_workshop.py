@@ -26,6 +26,9 @@ for _ in range(10):
        datas.append(data)
    result = ladder(datas, 100)
    print('#{} {}'.format(tc, result))
+
+
+
 # def ladder(datas, N):
 #     start = []
 #     for i in range(N):
