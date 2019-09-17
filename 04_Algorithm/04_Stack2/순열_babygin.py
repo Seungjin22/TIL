@@ -20,6 +20,7 @@ def babyGin():
         return
 
 def perm(n, k):
+    if flag == 1: return
     if k == n:
         babyGin()
     else:
