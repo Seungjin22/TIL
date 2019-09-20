@@ -24,6 +24,7 @@ for tc in range(1, T+1):
     N, B = map(int, input().split())
     h = list(map(int, input().split()))
     A = [0] * N
+    h.sort(reverse=True)
     ans = 0xfffffff
     powerset(N, 0, 0)
 
