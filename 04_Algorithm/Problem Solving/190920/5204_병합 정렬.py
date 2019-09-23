@@ -1,6 +1,9 @@
 import sys
 sys.stdin = open('5204_input.txt')
-
+"""
+pop()을 사용하면 시간 초과!
+==> index로 접근하기
+"""
 def merge_sort(m):
     if len(m) == 1: return m
     left = m[0:len(m)//2]
