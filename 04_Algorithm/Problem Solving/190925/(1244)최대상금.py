@@ -25,7 +25,7 @@ def Swap(prize, i, j):
 
 def findMax(prize, num, k):
     global ans
-    for i in range(MAXSIZE):
+    for i in range(MAXSIZE):    # 가지치기. Memoization
         if memo[k][i] == 0:
             memo[k][i] = prize
             break
@@ -50,6 +50,7 @@ for tc in range(T):
         t //=10
         numOfcard += 1
 
+    #### Greedy ####
     if num >= 6 :
         if num % 2 == 0 : num = 6
         else: num = 5
