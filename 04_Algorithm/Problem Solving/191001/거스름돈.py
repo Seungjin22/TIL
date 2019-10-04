@@ -13,7 +13,6 @@ def dfs(money, cnt):
         for i in range(n):
             dfs(money - coin[i], cnt + 1)
 
-
 m = int(input())
 n = int(input())
 coin = list(map(int, input().split()))
