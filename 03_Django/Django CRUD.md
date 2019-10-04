@@ -73,13 +73,15 @@
 
    `$ python manage.py makemigrations`
 
+   
+
    migrate commit 메세지 확인
 
-​		`$ python manage.py sqlmigrate articles 0001`
+   `$ python manage.py sqlmigrate articles 0001`
 
-​		migrate 상태 보기
+   migrate 상태 보기
 
-​		`$ python manage.py showmigrations`
+   `$ python manage.py showmigrations`
 
 
 
