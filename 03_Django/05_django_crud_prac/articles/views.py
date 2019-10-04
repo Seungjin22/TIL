@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Article
+from IPython import embed
 
 def index(request):
+    print(request.method)
     articles = Article.objects.order_by('-pk')
     context = {'articles': articles}
     return render(request, 'articles/index.html', context)
@@ -19,7 +21,8 @@ def create(request):
         raise ValidationError('Your Error Message')
     else:
         article.save()
-    return redirect('articles:detail', article.pk)
+    # embed()
+    return redirect('articles:index')
 
 def detail(request, pk):
     article = Article.objects.get(pk=pk)
