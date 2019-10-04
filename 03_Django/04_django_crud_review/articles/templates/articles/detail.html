@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h2 class="text-center">DETAIL</h2>
+    <h3>{{ article.pk }}번째 글</h3>
+    <hr>
+    <p>글 제목: {{ article.title }}</p>
+    <p>글 내용: {{ article.content }}</p>
+    <p>글 생성 시각: {{ article.created_at|date:"SHORT_DATE_FORMAT" }}</p>
+    <p>글 수정 시각: {{ article.updated_at|date:"M, j, Y" }}</p>
+    <hr>
+    <a href="/articles/{{ article.pk }}/edit/">[글 수정]</a>
+    <a href="/articles/{{ article.pk }}/delete/">[글 삭제]</a><br>
+    <a href="/articles/">[메인 페이지]</a>
+{% endblock %}

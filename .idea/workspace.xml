@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f5a0006-3409-4b37-9b06-85e32225cd33" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(1244)최대상금.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(1244)최대상금.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/templates/articles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,14 +16,14 @@
     <session id="1725412191">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="12" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -53,7 +54,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -588,9 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding>
-            <marker date="1568939649347" expanded="true" signature="333:338" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -621,9 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1568784639266" expanded="true" signature="62:351" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -638,9 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <marker date="1568776075548" expanded="true" signature="64:283" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -787,7 +779,6 @@
           <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1569396142649" expanded="true" signature="436:438" ph="..." />
           </folding>
         </state>
       </provider>

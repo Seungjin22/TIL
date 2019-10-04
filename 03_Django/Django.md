@@ -466,12 +466,6 @@ ORM은 객체 지향 프로그래밍 언어를 사용하여 호환되지 않는 
 
 
 
-make migrations 까지는 DB에 적용되지 않은 상태!
-
-=> 설계도를 만들고 이거 맞아? 물어보는 단계!
-
-
-
 ```python
 from django.db import models
 
@@ -503,6 +497,10 @@ auto_now
 ​		`python manage.py sqlmigrate articles 0001`
 
 ​		`python manage.py showmigrations`
+
+> make migrations 까지는 DB에 적용되지 않은 상태!
+>
+> => 설계도를 만들고 이거 맞아? 물어보는 단계!
 
 3. ##### migrate를 통해 데이터베이스에 반영한다.
 
@@ -873,6 +871,8 @@ def create(request):
     return redirect('/articles/')
 ```
 
+redirect 쓰는 이유
+
 
 
 ```html
@@ -988,3 +988,11 @@ target="_blank"
 
 
  class="d-flex justify-content-center align-items-center"
+
+
+
+
+
+
+
+CDN Delivery Network
