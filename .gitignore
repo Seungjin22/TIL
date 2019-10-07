@@ -119,6 +119,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# .env files
+.env
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 

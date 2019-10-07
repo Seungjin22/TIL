@@ -77,7 +77,7 @@
 
    migrate commit 메세지 확인
 
-   `$ python manage.py sqlmigrate articles 0001`
+   `$ python manage.py sqlmigrate 앱이름 0001`
 
    migrate 상태 보기
 
@@ -118,7 +118,7 @@
    </html>
    ```
 
-   ==> 이렇게 만든 `base.html`을 다른 html 파일에서 사용 가능
+   ==> 이렇게 만든 `base.html`을 다른 html 파일에서 확장해서 사용 가능
 
    ```html
    <!-- 다른 .html -->
@@ -144,14 +144,16 @@
 
 
 
-3. 앱 아래 `urls.py` 파일 만들기
+3. `urls.py` 분리하기
+
+   : 앱 아래 `urls.py` 파일 만들기
 
    ==> 한 곳에 몰빵할시 순서에 따라 접근되는 문제가! (전반기 수업 때 utilities 앱 하나 더 만들었을 때 참고)
 
    ​		INSTALLED_APPS에 등록된 순서대로 접근함
 
    - `urls.py(/프로젝트)` : 오리지널. 문지기 역할(어떤 앱으로 뿌려줄건지)
-
+   
    - `urls.py(/앱)`
 
 
@@ -180,9 +182,159 @@
 
 
 
+```python
+# views.py
+
+from django.shortcuts import render, redirect
+from .models import Article
+from IPython import embed
+
+def index(request):
+    print(request.method)
+    articles = Article.objects.order_by('-pk')
+    context = {'articles': articles}
+    return render(request, 'articles/index.html', context)
+
+def new(request):
+    return render(request, 'articles/new.html')
+
+def create(request):
+    try:
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+        article = Article(title=title, content=content)
+        article.full_clean()
+    except ValidationError:
+        raise ValidationError('Your Error Message')
+    else:
+        article.save()
+    # embed()
+    return redirect('articles:index')
+
+def detail(request, pk):
+    article = Article.objects.get(pk=pk)
+    context = {'article': article}
+    return render(request, 'articles/detail.html', context)
+
+def delete(request, pk):
+    article = Article.objects.get(pk=pk)
+    article.delete()
+    return redirect('articles:index')
+
+def edit(request, pk):
+    article = Article.objects.get(pk=pk)
+    context = {'article': article}
+    return render(request, 'articles/edit.html', context)
+
+def update(request, pk):
+    article = Article.objects.get(pk=pk)
+    article.title = request.POST.get('title')
+    article.content = request.POST.get('content')
+    article.save()
+    return redirect('articles:detail', article.pk)
+
+```
+
+
+
+```python
+# urls.py / 앱 아래
+
+from django.urls import path
+from . import views
+
+app_name = 'articles'
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('new/', views.new, name='new'),
+    path('create/', views.create, name='create'),
+    path('<int:pk>/', views.detail, name='detail'),
+    path('<int:pk>/delete/', views.delete, name='delete'),
+    path('<int:pk>/edit/', views.edit, name='edit'),
+    path('<int:pk>/update/', views.update, name='update'),
+]
+```
+
+
+
+#### + `urls.py/앱` 에서 앱 이름 설정하고 경로 간편화
+
+: 경로에 대한 의존성 문제 해결하기 위해서 ( 경로 수정이 필요할 때 `urls.py`에서만 수정 가능하도록! )
+
+```python
+# urls.py / 앱
+
+from django.urls import path
+from . import views
+
+app_name = 'articles'
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('new/', views.new, name='new'),
+    path('create/', views.create, name='create'),
+    path('<int:pk>/', views.detail, name='detail'),
+    path('<int:pk>/delete/', views.delete, name='delete'),
+    path('<int:pk>/edit/', views.edit, name='edit'),
+    path('<int:pk>/update/', views.update, name='update'),
+]
+
+# .py 에서
+return redirect('articles:detail', article.pk)
+
+# .html 에서
+<form action="{% url 'articles:update' article.pk %}" method=POST>
+```
 
 
 
 
 
+### + GET 과 POST 형식 두 개 합치기
 
+##### - new(GET) + create(POST)
+
+##### - edit(GET) + update(POST)
+
+
+
+embed() 사용해서 
+
+`$ pip install django-extensions`
+
+`$ pip install ipython`
+
+함수 안 수행되는 부분을 if문 사용하여 구분해주기
+
+```python
+def create(request):
+    # POST 요청일 때
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        content = request.POST.get('content')
+        article = Article(title=title, content=content)
+        article.save()
+        return redirect(f'/articles/{article.pk}/')
+    # GET 요청일 때
+    else:
+        return render(request, 'articles/create.html')
+    
+def update(request, pk):
+    # embed()
+    article = Article.objects.get(pk=pk)
+    # POST 요청일 때
+    if request.method == 'POST':
+        article.title = request.POST.get('title')
+        article.content = request.POST.get('content')
+        article.save()
+        return redirect(f'/articles/{article.pk}/')
+    # GET 요청일 때
+    else:
+        context = {'article': article}
+        return render(request, 'articles/edit.html', context)
+```
+
+
+
+### + delete | GET >> POST로 바꿔주기

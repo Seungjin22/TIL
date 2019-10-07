@@ -9,7 +9,11 @@
     <p>글 생성 시각: {{ article.created_at|date:"SHORT_DATE_FORMAT" }}</p>
     <p>글 수정 시각: {{ article.updated_at|date:"M, j, Y" }}</p>
     <hr>
-    <a href="/articles/{{ article.pk }}/edit/">[글 수정]</a>
-    <a href="/articles/{{ article.pk }}/delete/">[글 삭제]</a><br>
+    <form action="/articles/{{ article.pk }}/delete/" method="POST" >
+        {% csrf_token %}
+        <input type="submit" value="[글 삭제]" class="btn btn-potential">
+    </form>
+    <!-- <a href="/articles/{{ article.pk }}/delete/">[글 삭제]</a><br> -->
+    <a href="/articles/{{ article.pk }}/update/">[글 수정]</a><br>
     <a href="/articles/">[메인 페이지]</a>
 {% endblock %}

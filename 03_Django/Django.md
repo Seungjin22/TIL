@@ -62,7 +62,7 @@ Modeling 할 때 필요한 데이터 중요
 
 ---
 
-가상환경을 쓰는 이유 : 의존성 문제
+- 가상환경을 쓰는 이유 : 의존성 문제 제거하기 위해서
 
 
 
@@ -871,7 +871,15 @@ def create(request):
     return redirect('/articles/')
 ```
 
-redirect 쓰는 이유
+
+
+tag를 쓰는 이유 : DOM Tree 계층 구조
+
+- render 함수 쓰는 이유 : html 파일을 사용자에게 보여주고자 할 때
+
+- redirect 함수 쓰는 이유 : 일단 redirect 함수 첫 번째 인자로 **다시 한 번 요청을 보냄**
+
+==> GET과 POST의 차이!
 
 
 
@@ -996,3 +1004,130 @@ target="_blank"
 
 
 CDN Delivery Network
+
+
+
+- app_name 왜 해줘요?
+
+  : 경로에 대한 의존성 문제 해결하기 위해서 ( 경로 수정이 필요할 때 `urls.py`에서만 수정 가능하도록! )
+
+
+
+
+
+---
+
+
+
+### HTTP 기초
+
+Hypertext Transfer Protocol
+
+컨텐츠를 전송하기 위한 프로토콜(규약)
+
+
+
+##### HTTP 기본 속성
+
+|             |                                                              |
+| ----------- | :----------------------------------------------------------- |
+| Stateless   | 상태정보가 저장되지 않음. 즉, 요청 사이에는 연결고리가 없음. 클라이언트가 서버와 상호작용하기 위해서 HTTP 쿠키를 만들고, 상태가 있는 세션을 활용할 수 있도록 보완 |
+| Connectless | 서버에 요청을 하고 응답을 한 이후에 연결은 끊어짐            |
+
+
+
+#### URL
+
+```text
+Scheme/Protocol    Host    Port  
+http    ://    localhost : 3000 / posts / 3
+
+http://google.com/search?	q=http	==> query | URI는 맞지만 URL은 아니다.
+http://getbootstrap.com/docs/	#containers  ==> fragment
+```
+
+Locator는 그 자리에 가면 그 자원이 있어야!
+
+
+
+403 Forbidden ==> 토큰 깜빡하고 요청할때 발생하는 에러
+
+
+
+#### HTTP Method
+
+|   구분    |                          비고                          |
+| :-------: | :----------------------------------------------------: |
+|    GET    | 지정 리소스의 표시를 요청하며, 오직 데이터를 받기만 함 |
+|   POST    |            클라이언트 데이터를 서버로 보냄             |
+| PUT/PATCH | 서버로 보낸 데이터를 저장/지정 리소스의 부분만을 수정  |
+|  DELETE   |                   지정 리소스를 삭제                   |
+
+
+
+### RESTful (Representational State Transfer)
+
+: 웹의 장점을 활용하는 것에 대한 철학(생각) / 자원과 행위를 잘 표현 하자는 철학(생각) or 설계
+
+
+
+- 구성
+
+| 자원 |    행위     |      표현       |
+| :--: | :---------: | :-------------: |
+| URI  | HTTP Method | Representations |
+
+
+
+- 특징
+  - Uniform
+  - Stateless (무상태성)
+  - Cacheable (캐시가능) : HTTP의 캐시 기능이 적용 가능함
+  - Self-descriptiveness (자체표현구조) : REST API 메시지만 보고 상태와 행위
+  - Client - Server 구조
+  - 계층형 구조
+
+
+
+#### REST 중심 규칙
+
+1. **URI**는 정보의 **자원**을 표현해야 한다.
+2. 자원에 대한 **행위**는 **HTTP Method** 로 표현한다.
+
+
+
+GET/users/1/delete/ (X) ==>  URI는 자원을 표현하는데에만 중점을 둬야함 >> DELETE/users/1/
+
+GET/users/1/create/ (X) ==> Method가 올바르지 않음 (create는 DB에 조작을 가함) >> POST/users/1/
+
+
+
+
+
+`$ pip install django-extensions`
+
+`$ pip install ipython`
+
+
+
+```python
+from IPython import embed
+
+# 함수 안에서 embed()로 브레이크 걸어주기
+embed()
+
+>>>Terminal
+In [1]: request
+Out[1]: <WSGIRequest: POST '/articles/9/update/'>
+        
+In [2]: request.method
+Out[2]: 'POST'
+    
+In [3]: request.body
+Out[3]: b'csrfmiddlewaretoken=6PqHqXW0ramiB0HNv4AnRJiD4xVjVq6maQ1bxVbO5aSjNmj8hdNCtrIeE2nhpofN&title=%EB%91%98%EB%A6%AC%EA%B0%80123&content=%ED%98%B8%EC%9E%87%ED%98%B8%EC%9E%87123'
+```
+
+
+
+GET과 POST 형식 두 개 합치기
+

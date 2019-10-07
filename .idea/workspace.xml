@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f5a0006-3409-4b37-9b06-85e32225cd33" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/templates/articles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/04_django_crud_review/articles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03_Django/Django.md" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/Django.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +14,14 @@
     <session id="1725412191">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.3" value="12" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -149,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,95 +154,11 @@
               <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
               <item name="TIL" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="06_Combination" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="09_Advanced" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="10_DivideandConquer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190909" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190910" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190916" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190918" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190920" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190923" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190925" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Problem Solving" type="462c0819:PsiDirectoryNode" />
-              <item name="190926" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -434,7 +347,7 @@
   <component name="ToolWindowManager">
     <frame x="583" y="41" width="1089" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23882017" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23882017" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

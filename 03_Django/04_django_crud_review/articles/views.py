@@ -1,31 +1,25 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import ValidationError
 from .models import Article
+from IPython import embed
 
 def index(request):
     # articles = Article.objects.all()[::-1]
     articles = Article.objects.order_by('-pk')
-    # print(articles)
-    # print(type(articles))
-    context = {
-        'articles': articles
-    }
+    context = {'articles': articles}
     return render(request, 'articles/index.html', context)
 
-def new(request):
-    return render(request, 'articles/new.html')
-
 def create(request):
-    try:
+    # POST 요청일 때
+    if request.method == 'POST':
         title = request.POST.get('title')
         content = request.POST.get('content')
         article = Article(title=title, content=content)
-        article.full_clean()
-    except ValidationError:
-        raise ValidationError('Your Error Message')
-    else:
         article.save()
         return redirect(f'/articles/{article.pk}/')
+    # GET 요청일 때
+    else:
+        return render(request, 'articles/create.html')
 
     """
     title = request.POST.get('title')
@@ -56,17 +50,22 @@ def detail(request, pk):
 
 def delete(request, pk):
     article = Article.objects.get(pk=pk)
-    article.delete()
-    return redirect('/articles/')
-
-def edit(request, pk):
-    article = Article.objects.get(pk=pk)
-    context = {'article': article}
-    return render(request, 'articles/edit.html', context)
+    if request.method == 'POST':
+        article.delete()
+        return redirect('/articles/')
+    return redirect(f'/articles/{article.pk}/')
+    
 
 def update(request, pk):
+    # embed()
     article = Article.objects.get(pk=pk)
-    article.title = request.POST.get('title')
-    article.content = request.POST.get('content')
-    article.save()
-    return redirect(f'/articles/{article.pk}/')
+    # POST 요청일 때
+    if request.method == 'POST':
+        article.title = request.POST.get('title')
+        article.content = request.POST.get('content')
+        article.save()
+        return redirect(f'/articles/{article.pk}/')
+    # GET 요청일 때
+    else:
+        context = {'article': article}
+        return render(request, 'articles/edit.html', context)

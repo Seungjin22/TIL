@@ -9,19 +9,14 @@ def index(request):
     return render(request, 'articles/index.html', context)
 
 def new(request):
+    embed()
     return render(request, 'articles/new.html')
 
 def create(request):
-    try:
-        title = request.POST.get('title')
-        content = request.POST.get('content')
-        article = Article(title=title, content=content)
-        article.full_clean()
-    except ValidationError:
-        raise ValidationError('Your Error Message')
-    else:
-        article.save()
-    # embed()
+    title = request.POST.get('title')
+    content = request.POST.get('content')
+    article = Article(title=title, content=content)
+    article.save()
     return redirect('articles:index')
 
 def detail(request, pk):
@@ -40,6 +35,7 @@ def edit(request, pk):
     return render(request, 'articles/edit.html', context)
 
 def update(request, pk):
+    embed()
     article = Article.objects.get(pk=pk)
     article.title = request.POST.get('title')
     article.content = request.POST.get('content')
