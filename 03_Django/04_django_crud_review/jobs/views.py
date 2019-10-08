@@ -38,5 +38,29 @@ def past_life(request):
     except IndexError:
         image = None
 
-    context = {'person': person, 'image': image}
+    # context = {'person': person, 'image': image}
+    # return render(request, 'jobs/past_life.html', context)
+
+
+    # NAVER IMAGE
+    #1. 요청 헤더 정보 준비
+    NAVER_ID = config('NAVER_ID')
+    NAVER_SECRET = config('NAVER_SECRET')
+
+    headers = {'X-Naver-Client-Id': NAVER_ID,
+            'X-Naver-Client-Secret': NAVER_SECRET,}
+
+    #2. 요청 URL 준비
+    naver_url = f'https://openapi.naver.com/v1/search/image?query={past_job}&filter=medium&display=1'
+
+    #3. 실제 요청 보내기
+    naver_data = requests.get(naver_url, headers=headers).json()
+    print(naver_data)
+
+    #4. 이미지 링크 추출하기
+    naver_image = naver_data.get('items')[0].get('link')
+
+    context = {'person':person, 'image': image, 'naver_image': naver_image,}
+
     return render(request, 'jobs/past_life.html', context)
+

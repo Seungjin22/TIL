@@ -2,7 +2,7 @@
 
 {% block body %}
     <h2 class="text-center">NEW</h2>
-    <form action="/articles/create/" method="POST">
+    <form action="{% url 'articles:create' %}" method="POST">
         {% csrf_token %}
         <label for="title">Title</label>
         <input type="text" name="title" id="title"><br>
@@ -11,5 +11,5 @@
         <input type="submit" value="글 작성">
     </form>
     <hr>
-    <a href="/articles/">[메인 페이지]</a>
+    <a href="{% url 'articles:index' %}">[메인 페이지]</a>
 {% endblock %}

@@ -1131,3 +1131,108 @@ Out[3]: b'csrfmiddlewaretoken=6PqHqXW0ramiB0HNv4AnRJiD4xVjVq6maQ1bxVbO5aSjNmj8hd
 
 GET과 POST 형식 두 개 합치기
 
+
+
+
+
+### Model Relation (1: N) | 댓글달기
+
+```python
+# models.py
+
+class Comment(models.Model):
+    article = models.ForeignKey(Article, on_delete=models.CASCADE) # on_delete
+    content = models.CharField(max_length=30)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        ordering = ['-pk', ]
+```
+
+==> `on_delete=models.CASCADE` : 게시글 삭제하면 밑에 달린 댓글도 다 삭제
+
+
+
+- **order_by** : DB 상에 insert한 순서대로 되어있을 때 그 순서 뒤집기
+
+- **ordering** : order_by를 사용하지 않아도 그 순서가 바뀌어서 나옴 ('-pk' 순으로 자동 저장)
+
+
+
+
+
+comments`.exclude()` <==> comments`.filter()`
+
+`filter()` 는 없는 객체 소환해도 에러는 안 남. 빈 리스트 `<QuerySet []>`을 가져올 뿐
+
+```python
+In [13]: comments.exclude(content='first comment')
+Out[13]: <QuerySet [<Comment: <Article(2): Comment(3 - third comment)>>, <Comment: <Article(2): Comment(2 - second comment)>>]>
+
+In [14]: comments.filter(content='first comment')
+Out[14]: <QuerySet [<Comment: <Article(2): Comment(1 - first comment)>>]>
+
+In [15]: comments.filter(content='fifth content')
+Out[15]: <QuerySet []>
+```
+
+
+
+```python
+# .iterator()
+In [18]: for comment in comments.iterator():
+    ...:     print(comment)
+    ...: 
+<Article(2): Comment(3 - third comment)>
+<Article(2): Comment(2 - second comment)>
+<Article(2): Comment(1 - first comment)>
+
+In [19]: for comment in comments:
+    ...:     print(comment)
+    ...: 
+<Article(2): Comment(3 - third comment)>
+<Article(2): Comment(2 - second comment)>
+<Article(2): Comment(1 - first comment)>
+```
+
+메모리 캐시가 누수되는 걸 방지하기 위해 `iterator()` 사용
+
+
+
+
+
+`article.comment` (X) 불가능 ==> 1(article)의 입장에서는 N(comment)을 가리킬 수 없음 (**보장**할 수 없음)
+
+`article.comment_set.all()` (O)  전부 불러와줘야!
+
+`comment.article` (O) 가능 ==> N의 입장에서 가리키는 1은 확실하니까 가능
+
+
+
+`related_name` 을 설정하는 순간 `_set` 이 아닌 설정한 이름으로 1이 N을 불러올 수 있음!
+
+>```python
+># models.py에서 related_name 설정하기
+>
+>class Comment(models.Model):
+>    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
+>    content = models.CharField(max_length=30)
+>    created_at = models.DateTimeField(auto_now_add=True)
+>    updated_at = models.DateTimeField(auto_now=True)
+>    
+>    
+># TERMINAL
+>In [3]: article.comments.all()	# 이제 comment_set 사용 불가 ==> comments 가능
+>Out[3]: <QuerySet [<Comment: <Article(2): Comment(3 - third comment)>>, <Comment: <Article(2): Comment(2 - second comment)>>, <Comment: <Article(2): Comment(1 - first comment)>>]>
+>```
+
+
+
+
+
+comment_pk 와 article_pk 구분해주기
+
+`views.py` 에서 게시글 pk ==> article_pk 로 바꿔주기
+
+`urls.py` 에서 게시글 pk ==> article_pk 로 바꿔주기
