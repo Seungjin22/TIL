@@ -8,7 +8,7 @@
 
 
 
-DB로 얻는 장점들
+[DB로 얻는 장점들]
 
 - 데이터 중복 최소화
 - 데이터 무결성
@@ -22,7 +22,7 @@ DB로 얻는 장점들
 
 MySQL, SQLite, PostgreSQL...
 
-특징
+[특징]
 
 - 모든 데이터를 2차원으로 표현(테이블 형태)
 - 테이블은 row(record, tuple)와 column(field, item)으로 구성
@@ -61,7 +61,7 @@ MySQL, SQLite, PostgreSQL...
 
 
 
-특징
+[특징]
 
 - ; 까지 하나의 명령으로 간주
 - . 은 sqlite3 프로그램 기능 실행
