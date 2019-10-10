@@ -9,14 +9,19 @@
     <p>글 생성 시각: {{ article.created_at|date:"SHORT_DATE_FORMAT" }}</p>
     <p>글 수정 시각: {{ article.updated_at|date:"M, j, Y" }}</p>
     <hr>
-    <h5>댓글 목록</h5><br>
+    <p><b>{{ article.comments.all|length }}개의 댓글</b></p>
+    <hr>
+    <h5><p><b>{{ comments|length }}개 댓글</b></p>댓글 목록</h5><br>
     {% for comment in article.comments.all %}
         <p>댓글 번호 : {{ comment.pk }}</p>
         <p>댓글 내용: {{ comment.content }}</p>
+        <a href="{% url 'articles:comments_update' article.pk comment.pk %}">[댓글 수정]</a>
         <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
             {% csrf_token %}
             <input type="submit" value="댓글 삭제" class="btn btn-warning">
         </form><br>
+    {% empty %}
+        <p><b>댓글이 없네유... 댓글 좀 써주세욤...</b></p>
     {% endfor %}
     <hr>
     <form action="{% url 'articles:comments_create' article.pk %}" method="POST">

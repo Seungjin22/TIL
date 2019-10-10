@@ -1137,6 +1137,8 @@ GET과 POST 형식 두 개 합치기
 
 ### Model Relation (1: N) | 댓글달기
 
+`ForeignKey`는 N의 모델 안에서 설정
+
 ```python
 # models.py
 
@@ -1236,3 +1238,20 @@ comment_pk 와 article_pk 구분해주기
 `views.py` 에서 게시글 pk ==> article_pk 로 바꿔주기
 
 `urls.py` 에서 게시글 pk ==> article_pk 로 바꿔주기
+
+
+
+```html
+<!-- detail.html -->
+
+<h5>댓글 목록</h5><br>
+    {% for comment in article.comments.all %}
+        <p>댓글 번호 : {{ comment.pk }}</p>
+        <p>댓글 내용: {{ comment.content }}</p>
+        <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="댓글 삭제" class="btn btn-warning">
+        </form><br>
+    {% endfor %}
+```
+
