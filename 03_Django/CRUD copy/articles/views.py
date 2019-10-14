@@ -14,10 +14,8 @@ def create(request):
     if request.method == 'POST':
         title = request.POST.get('title')
         content = request.POST.get('content')
-        image = request.FILES.get('image')
-        article = Article(title=title, content=content, image=image)
+        article = Article(title=title, content=content)
         article.save()
-        # embed()
         return redirect('articles:detail', article.pk)
     # GET 요청일 때
     else:

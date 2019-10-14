@@ -494,7 +494,7 @@ auto_now
 
 
 
-​		`python manage.py sqlmigrate articles 0001`
+​		`python manage.py sqlmigrate 모델이름 0001`
 
 ​		`python manage.py showmigrations`
 
@@ -1254,4 +1254,77 @@ comment_pk 와 article_pk 구분해주기
         </form><br>
     {% endfor %}
 ```
+
+
+
+
+
+앱 아래 `static` 폴더 만들고 그 아래에 이름 공간 구분 `앱이름`
+
+```text
+articles(앱)
+	static
+		articles
+			images
+				disney.jpg
+			
+			
+crud(프로젝트)
+	assets
+		images
+			disneyland.jpg
+```
+
+
+
+`settings.py` 에서 설정
+
+```python
+# settings.py
+
+# 웹 페이지에서 사용할 정적 파일의 최상위 URL 경로
+# (주의! 실제 파일이 위치한 디렉토리는 아님)
+STATIC_URL = '/static/'
+
+# 정적 파일이 실제 위치한 경로
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'crud', 'assets'),
+]
+```
+
+==> `STATICFILES_DIRS` 를 통해 assets 까지 경로를 Django에게 알려줬음
+
+```html
+<!-- disneyland.jpg 불러오려면 -->
+
+{% static 'images/disneyland.jpg' %}
+
+<!-- disney.jpg 불러오려면 -->
+
+{% static 'articles/images/disney.jpg' %}
+```
+
+
+
+`models.py` 에서 DB에 image 넣기 위해 새 column 만들어주기
+
+```python
+class Article(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    image = models.ImageField(blank=True) # 이미지 없으면 '' 빈 스트링 들어감
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+```
+
+
+
+`create.html` 에서 image 파일 업로드할 수 있는 부분 만들어주기
+
+```html
+<label for="image">Image</label>
+<input type="file" name="image" id="image" accept="image/*">
+```
+
+​	- `accept="image/*"` 는 업로드 가능한 이미지 파일만 보여줌
 

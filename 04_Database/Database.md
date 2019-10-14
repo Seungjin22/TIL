@@ -63,9 +63,9 @@ MySQL, SQLite, PostgreSQL...
 
 [특징]
 
-- ; 까지 하나의 명령으로 간주
-- . 은 sqlite3 프로그램 기능 실행
-- -.schema 테이블이름 ==> ; 를 붙이지 않음
+- `;` 까지 하나의 명령으로 간주
+- `.` 은 sqlite3 프로그램 기능 실행
+- `-.schema 테이블이름` ==> ; 를 붙이지 않음 (sqlite 프로그램 실행어 | SQL이 아님)
 
 
 
@@ -95,7 +95,7 @@ VS Code 터미널에서 켜기
 
 `sqlite> .mode csv`
 
-`sqlite> .import hellodb.csv examples`
+`sqlite> .import hellodb.csv examples` : hellodb.csv를 examples라는 db에 넣겠다
 
 `sqlite> .SELECT * FROM examples;`
 
@@ -173,23 +173,23 @@ rowid       name        age         address
 
 ##### Data 조회(SELECT)
 
-- 해당 테이블의 모든 데이터 조회
+- 해당 테이블의 '모든' 데이터 조회
 
   `SELECT * FROM 테이블;`
 
-- LIMIT을 사용하면 원하는 '개수'만큼 가져옴
+- **LIMIT**을 사용하면 원하는 '개수'만큼 가져옴
 
   `SELECT rowid, name FROM classmates LIMIT 1;`
 
-- OFFSET을 사용하면 '몇 번째' 데이터 가져옴 (인덱스라 3번째 원하면 OFFSET 2)
+- **OFFSET**을 사용하면 '몇 번째' 데이터 가져옴 (인덱스라 3번째 원하면 OFFSET 2)
 
   `SELECT rowid, name FROM classmates LIMIT 1 OFFSET 2;`
 
-- WHERE을 사용하면 '특정한 값'만 가져옴 (주소가 서울인 사람만)
+- **WHERE**을 사용하면 '특정한 값'만 가져옴 (주소가 서울인 사람만)
 
   `SELECT rowid, name FROM classmates WHERE address='서울'`
 
-- DISTINCT 사용해서 '중복없이' 데이터 가져옴 (나이 값 중복없이 다 가져오기)
+- **DISTINCT** 사용해서 '중복없이' 데이터 가져옴 (나이 값 중복없이 다 가져오기)
 
   `SELECT DISTINCT age FROM classmates;`
 
@@ -197,7 +197,7 @@ rowid       name        age         address
 
   `SELECT first_name, last_name FROM users WHERE first_name="승진" and last_name="하";`
 
-- COUNT() 사용하면 레코드 개수 반환
+- **COUNT()** 사용하면 레코드 개수 반환
 
   `SELECT COUNT(*) FROM users;`
 
@@ -213,7 +213,7 @@ rowid       name        age         address
 
 - 중복이 불가능한 rowid를 기준으로 삭제
 
-  `DELETE FROM classmates WHERE rowid=4`
+  `DELETE FROM classmates WHERE rowid=4;`
 
 ##### Data 수정(UPDATE)
 

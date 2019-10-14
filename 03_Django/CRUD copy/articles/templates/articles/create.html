@@ -1,18 +1,13 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block body %}
     <h2 class="text-center">NEW</h2>
-    <img src="{% static 'images/disneyland.jpg' %}" alt="disneyland-image"><br>
-    <hr>
-    <form action="{% url 'articles:create' %}" method="POST" enctype="multipart/form-data">
+    <form action="{% url 'articles:create' %}" method="POST">
         {% csrf_token %}
         <label for="title">Title</label>
         <input type="text" name="title" id="title"><br>
         <label for="content">Content</label>
         <textarea name="content" id="content" cols="30" rows="10"></textarea><br>
-        <label for="image">Image</label>
-        <input type="file" name="image" id="image" accept="image/*"><br>
         <input type="submit" value="글 작성">
     </form>
     <hr>
