@@ -1133,6 +1133,8 @@ GET과 POST 형식 두 개 합치기
 
 
 
+---
+
 
 
 ### Model Relation (1: N) | 댓글달기
@@ -1257,7 +1259,11 @@ comment_pk 와 article_pk 구분해주기
 
 
 
+---
 
+
+
+### 이미지 업로드
 
 앱 아래 `static` 폴더 만들고 그 아래에 이름 공간 구분 `앱이름`
 
@@ -1281,6 +1287,11 @@ crud(프로젝트)
 
 ```python
 # settings.py
+
+INSTALLED_APPS = [
+    'django.contrib.staticfiles',	# 이게 있어서 static 파일 불러와줌
+    'django_extensions',
+]
 
 # 웹 페이지에서 사용할 정적 파일의 최상위 URL 경로
 # (주의! 실제 파일이 위치한 디렉토리는 아님)
@@ -1322,9 +1333,353 @@ class Article(models.Model):
 `create.html` 에서 image 파일 업로드할 수 있는 부분 만들어주기
 
 ```html
-<label for="image">Image</label>
-<input type="file" name="image" id="image" accept="image/*">
+{% load static %}
+
+<form action="{% url 'articles:create' %}" method="POST" enctype="multipart/form-data">
+    <label for="image">Image</label>
+    <input type="file" name="image" id="image" accept="image/*">
 ```
 
-​	- `accept="image/*"` 는 업로드 가능한 이미지 파일만 보여줌
+- `<form>` 태그 안에 인코딩타입 설정 꼭 해줘야!
+  - `enctype="multipart/form-data"` 
+
+	- `accept="image/*"` 는 업로드 가능한 이미지 파일만 보여줌
+ - `{% load static %}` 이 태그가 필요한 이유는 내장된 이미지에는 주소값이  X 부여
+   	- 사용자가 올린 이미지(media)는 주소값이 자동 부여되니까 필요 없음
+
+
+
+사용자가 업로드한 이미지 detail에서 보고싶은데 안보임
+
+==> 업로드한 이미지 파일이 venv 폴더 안에 마구잡이로 들어감
+
+==> 경로 설정해주자!!
+
+```python
+# settings.py
+
+# STATIC_URL과 비슷
+# 업로드된 파일의 주소(URL)를 만들어줌
+# 실제 이미지 파일이 업로드 된 디렉토리는 아님
+MEDIA_URL = '/media/'
+
+# 사용자가 업로드한 이미지 파일의 저장 위치
+# 업로드가 끝난 이미지 파일을 위치 시킬 최상위 경로
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+```
+
+
+
+```python
+# url.py / 프로젝트 아래
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+# 파일이 업로드 된 이후에 프로젝트 내부에 존재하는 파일의 주소를 만들어줌
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+
+
+```python
+# 경로 설정 후 업로드한 이미지 확인
+# TERMINAL
+
+In [2]: article = Article.objects.get(pk=11)
+
+In [3]: article.image.url
+Out[3]: '/media/bighero.JPG'	# media 라는 폴더 자동 생성 후 그 안에 저장
+
+In [4]: article.image.name
+Out[4]: 'bighero.JPG'
+
+In [5]: article.image.path
+Out[5]: 'C:\\Users\\student\\TIL\\03_Django\\04_django_crud_review\\media\\bighero.JPG'
+```
+
+
+
+`input type="file"` 인 경우에는 `update.html`에서 기존 이미지를 띄우지는 못함
+
+==> 그냥 바로 덮어쓰기 `article.image = request.FILES.get('image')`
+
+
+
+이전에 등록한 이미지 없는 글 Error 해결하기
+
+==> image가 없을 때 'no image' 이미지 띄워주기
+
+```html
+<!-- detail.html -->
+<!-- update.html -->
+
+{% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.image }}">
+{% else %}
+        <img src="{% static 'articles/images/noimage.jpg' %}" alt="noimage">
+{% endif %}
+```
+
+
+
+이미지를 resizing 하기 위한 라이브러리 설치
+
+`$ pip install pilkit django-imagekit`
+
+```python
+# settings.py
+
+INSTALLED_APPS = [
+    'imagekit',
+]
+```
+
+```python
+# models.py
+
+from imagekit.models import ProcessedImageField
+from imagekit.processors import Thumbnail
+
+class Article(models.Model):
+    # image = models.ImageField(blank=True)
+    image = ProcessedImageField(
+        processors=[Thumbnail(200, 300)], # 처리할 이미지 사이즈
+        format='JPEG', # 저장 이미지 포맷
+        options={'quality': 90}, # 추가 옵션(원본의 90%로 압축) | 보통 70~90
+        upload_to='articles/images', # MEDIA_ROOT(media)/articles/images
+    )
+```
+
+
+
+원본이미지 ==> make migrations도 필요없음
+
+```python
+# models.py
+from imagekit.models import ProcessedImageField, ImageSpecField
+from imagekit.processors import Thumbnail
+
+class Article(models.Model):
+    image = models.ImageField(blank=True)
+    image_thumbnail = ImageSpecField(
+        source='image', # 원본 이미지 필드명
+        processors=[Thumbnail(300, 200)],
+        format='JPEG',
+        options={'quality': 90},
+    )
+```
+
+
+
+'몇 번' 글의 이미지 파일인지 경로 업데이트
+
+```python
+# models.py
+
+# 이미지 업로드 경로 커스텀
+# instance => Article 모델의 인스턴스 객체
+# filename => 사용자가 업로드한 파일의 이름
+def articles_image_path(instance, filename):
+    return f'articles/{instance.pk}번글/images/{filename}'
+
+class Article(models.Model):
+    image = ProcessedImageField(
+        processors=[Thumbnail(300, 200)], # 처리할 이미지 사이즈
+        format='JPEG', # 저장 이미지 포맷
+        options={'quality': 90}, # 추가 옵션(원본의 90%로 압축) | 보통 70~90
+        upload_to=articles_image_path, # MEDIA_ROOT(media)/articles/images
+    )
+```
+
+
+
+글을 생성한 시점에는 pk가 부여되지 않아서 ==> `None번 글`
+
+글을 수정한 후에는 pk 부여 ==> `22번 글`
+
+
+
+favicon 설정하기
+
+
+
+---
+
+
+
+### form
+
+```python
+def create(request):
+    if request.method == 'POST':
+        # form 인스턴스를 생성하고 요청에 의한 데이터로 채움
+        form = ArticleForm(request.POST)
+        # 해당 폼이 유효한지 확인
+        if form.is_valid():
+            # form.cleaned_data를 통해 폼 데이터를 정제 (type(form.cleaned_data) = dict)
+            title = form.cleaned_data.get('title')
+            content = form.cleaned_data.get('content')
+            article = Article.objects.create(title=title, content=content)
+            return redirect('articles:detail', article.pk)
+    else:
+        # GET요청 들어왔을 때, 빈 폼 만들어짐 ==> 유효하지 않음
+        form = ArticleForm()
+    context = {'form': form, }
+    return render(request, 'articles/create.html', context)
+```
+
+`cleaned_data` : 유효하지 않은 데이터는 거르기, 유효한 데이터만 포함
+
+
+
+```html
+<!-- 원래 create.html -->
+
+{% extends 'articles/base.html' %}
+
+{% block body %}
+    <h2>CREATE</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="title">제목: </label>
+        <input type="text" name="title" id="title"><br>
+        <label for="content">내용: </label><br>
+        <textarea name="content" id="content" cols="30" rows="5"></textarea><br>
+        <input type="submit" value="입력">
+    </form>
+    
+{% endblock %}
+```
+
+```html
+<!-- create.html -->
+
+{% block body %}
+    <h2>CREATE</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="입력">
+    </form>
+    <a href="{% url 'articles:index' %}">[메인 페이지]</a>
+{% endblock %}
+
+
+<!-- 이런 세부적인 조작도 가능 -->
+
+{% block body %}
+    <h2>CREATE</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field.label_tag }}
+            {{ field }}
+        {% endfor %}
+        <input type="submit" value="입력">
+    </form>
+    <a href="{% url 'articles:index' %}">[메인 페이지]</a>
+{% endblock %}
+```
+
+
+
+```python
+# TERMINAL
+# create 함수 안 else문에 embed() 걸기 ==> 글 작성 전!!
+
+In [1]: form
+Out[1]: <ArticleForm bound=False, valid=Unknown, fields=(title;content)>
+
+In [2]: form.is_valid()
+Out[2]: False
+
+In [3]: type(form)
+Out[3]: articles.forms.ArticleForm
+
+In [4]: form.fields
+Out[4]:
+OrderedDict([('title', <django.forms.fields.CharField at 0x2670ac53688>),
+             ('content', <django.forms.fields.CharField at 0x2670ac53748>)])
+```
+
+```python
+# TERMINAL
+# create 함수 안 if문에 embed() ==> 글 작성 후!! POST 요청
+
+In [1]: request.POST
+Out[1]: <QueryDict: {'csrfmiddlewaretoken': ['35nqayCSoo8KQo8quOo3RHjdMqIll77NiMrREYsPLaqfqvK73IssiS2okBvPW5qS'], 'title': ['dfdf'], 'content': ['dfdfd']}>
+
+In [2]: form.is_valid()
+Out[2]: True
+
+In [3]: form
+Out[3]: <ArticleForm bound=True, valid=True, fields=(title;content)>
+
+In [4]: form.cleaned_data
+Out[4]: {'title': 'dfdf', 'content': 'dfdfd'}
+
+In [5]: type(form.cleaned_data)
+Out[5]: dict
+
+In [6]: form.as_p()
+Out[6]: '<p><label for="id_title">Title:</label> <input type="text" name="title" value="dfdf" maxlength="20" required id="id_title"></p>\n<p><label for="id_content">Content:</label> <input type="text" name="content" value="dfdfd" required id="id_content"></p>'
+```
+
+
+
+`forms.py`에서 CharField 속성에 `widget=forms.Textarea`라고 설정
+
+
+
+```python
+# forms.py
+
+from django import forms
+
+class ArticleForm(forms.Form):
+    # title = forms.CharField(max_length=20)
+    # content = forms.CharField(widget=forms.Textarea)
+    title = forms.CharField(
+        max_length=20,
+        label='제목',
+        widget=forms.TextInput(
+            attrs={
+                'class': 'my-title',
+                'placeholder': 'Enter the title!',
+            }
+        )
+    )
+    content = forms.CharField(
+        widget=forms.Textarea(
+            attrs={
+                'class': 'my-content',
+                'placeholder': 'Enter the content!',
+                'rows': 5,
+                'cols': 50,
+            }
+        )
+    )
+```
+
+
+
+##### `/articles/10000/` 주소창에 이렇게 입력해서 10000번째 글 조회한다면?
+
+ ==> 500 Error!! 왜?! 개발자 잘못이 아닌걸! 없는 글 조회한 사용자 잘못!!
+
+![](noteimage/500error.PNG)
+
+```python
+# views.py
+
+def detail(request, article_pk):
+    # article = Article.objects.get(pk=article_pk)
+    # 이렇게 404에러로 바꿔주기!
+    article = get_object_or_404(Article, pk=article_pk)
+    context = {'article': article, }
+    return render(request, 'articles/detail.html', context)
+```
+
+![](noteimage/404error.PNG)
 

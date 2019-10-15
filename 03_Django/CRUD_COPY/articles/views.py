@@ -68,7 +68,7 @@ def update(request, article_pk):
     # GET 요청일 때
     else:
         context = {'article': article}
-        return render(request, 'articles/edit.html', context)
+        return render(request, 'articles/update.html', context)
 
 
 def comments_create(request, article_pk):

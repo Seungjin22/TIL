@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block body %}
     <h2 class="text-center">DETAIL</h2>
-    <img src="{{ article.image.url }}" alt="">
+    {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.image }}">
+        <!-- 썸네일 이미지<img src="{{ article.image_thumbnail.url }}" alt="{{ article.image }}"> -->
+    {% else %}
+        <img src="{% static 'articles/images/noimage.jpg' %}" alt="noimage">
+    {% endif %}
     <h3>{{ article.pk }}번째 글</h3>
     <hr>
     <p>글 제목: {{ article.title }}</p>

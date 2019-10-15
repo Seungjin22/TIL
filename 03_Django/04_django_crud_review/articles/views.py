@@ -65,12 +65,13 @@ def update(request, article_pk):
     if request.method == 'POST':
         article.title = request.POST.get('title')
         article.content = request.POST.get('content')
+        article.image = request.FILES.get('image')
         article.save()
         return redirect('articles:detail', article.pk)
     # GET 요청일 때
     else:
         context = {'article': article}
-        return render(request, 'articles/edit.html', context)
+        return render(request, 'articles/update.html', context)
 
 
 def comments_create(request, article_pk):
