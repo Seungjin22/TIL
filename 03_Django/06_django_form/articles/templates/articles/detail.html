@@ -1,4 +1,5 @@
 {% extends 'articles/base.html' %}
+{% load bootstrap4 %}
 
 {% block body %}
     <h2>DETAIL</h2>
@@ -13,6 +14,43 @@
         {% csrf_token %}
         <input type="submit" value="글 삭제">
     </form>
+    <a href="{% url 'articles:update' article.pk %}">[글 수정]</a>
+    <hr>
+    <h4>새 댓글</h4>
+    <br>
+    <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <input type="submit" value="댓글 입력">
+    </form>
+    <hr>
+    <h4>댓글 목록</h4>
+    {% for comment in article.comments.all %}
+        <hr>
+        {% if request.resolver_match.url_name == 'comments_update' %}
+            <form action="" method="POST">
+                {% csrf_token %}
+                {% bootstrap_form comment_form layout='horizontal' %}
+                {% buttons submit="Submit" reset="Cancel" %}{% endbuttons %}
+                <a href="{% url 'articles:detail' article.pk %}">[댓글 수정 취소]</a>
+                <br>
+            </form>
+        {% else %}
+            <p>댓글 번호: {{ comment.pk }}</p>    
+            <p>댓글 내용: {{ comment.content }}</p>
+            <p>등록 시간: {{ comment.created_at }}</p>
+            <p>수정 시간: {{ comment.updated_at }}</p>
+
+        {% endif %}
+            <form action="{% url 'articles:comments_update' article.pk comment.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="댓글 수정">
+            </form>
+            <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="댓글 삭제">
+            </form>
+    {% endfor %}
     <hr>
     <a href="{% url 'articles:index' %}">[메인 페이지로]</a>
 {% endblock %}

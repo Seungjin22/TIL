@@ -1,0 +1,23 @@
+{% extends 'articles/base.html' %}
+{% load bootstrap4 %}
+
+{% block body %}
+    {% if request.resolver_match.url_name == 'create' %}
+        <h2>CREATE</h2>
+    {% else %}
+        <h2>UPDATE</h2>
+    {% endif %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form layout='horizontal' %}
+        {% buttons submit="Submit" reset="Cancel" %}{% endbuttons %}
+        <!-- {{ form.as_p }}
+        <input type="submit" value="입력"> -->
+    </form>
+
+    {% if request.resolver_match.url_name == 'create' %}
+        <a href="{% url 'articles:index' %}">[메인 페이지]</a>
+    {% else %}
+        <a href="{% url 'articles:detail' article.pk %}">[글 상세보기]</a>
+    {% endif %}
+{% endblock %}

@@ -1406,7 +1406,7 @@ Out[5]: 'C:\\Users\\student\\TIL\\03_Django\\04_django_crud_review\\media\\bighe
 
 
 
-이전에 등록한 이미지 없는 글 Error 해결하기
+##### 이전에 등록한 이미지 없는 글 Error 해결하기
 
 ==> image가 없을 때 'no image' 이미지 띄워주기
 
@@ -1423,7 +1423,7 @@ Out[5]: 'C:\\Users\\student\\TIL\\03_Django\\04_django_crud_review\\media\\bighe
 
 
 
-이미지를 resizing 하기 위한 라이브러리 설치
+##### 이미지를 resizing 하기 위한 라이브러리 설치
 
 `$ pip install pilkit django-imagekit`
 
@@ -1472,7 +1472,7 @@ class Article(models.Model):
 
 
 
-'몇 번' 글의 이미지 파일인지 경로 업데이트
+##### '몇 번' 글의 이미지 파일인지 경로 업데이트
 
 ```python
 # models.py
@@ -1508,7 +1508,17 @@ favicon 설정하기
 
 
 
-### form
+### Form 클래스
+
+: 'Django'가 자동으로 form 만들어줌
+
+
+
+##### form validation(유효성 검사)
+
+- 유효하지 않은 정보는 DB 자체에 저장하면 안됨
+- `.is_valid()`
+- `cleaned_data` : 유효하지 않은 데이터는 거르기, 유효한 데이터만 포함
 
 ```python
 def create(request):
@@ -1529,7 +1539,7 @@ def create(request):
     return render(request, 'articles/create.html', context)
 ```
 
-`cleaned_data` : 유효하지 않은 데이터는 거르기, 유효한 데이터만 포함
+`form.cleaned_data`는 dict 형태
 
 
 
@@ -1666,7 +1676,7 @@ class ArticleForm(forms.Form):
 
 ##### `/articles/10000/` 주소창에 이렇게 입력해서 10000번째 글 조회한다면?
 
- ==> 500 Error!! 왜?! 개발자 잘못이 아닌걸! 없는 글 조회한 사용자 잘못!!
+ ==> 500 Error!! 왜?! 서버 잘못이 아닌걸! 없는 글 조회한 사용자 잘못!!
 
 ![](noteimage/500error.PNG)
 
@@ -1682,4 +1692,134 @@ def detail(request, article_pk):
 ```
 
 ![](noteimage/404error.PNG)
+
+
+
+
+
+#### `requirements.txt` 만들고 설치하기
+
+`$ pip freeze > requirements.txt`
+
+`$ pip install -r requirements.txt`
+
+
+
+```python
+def update(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            article.title = form.cleaned_data.get('title')
+            article.content = form.cleaned_data.get('content')
+            article.save()
+            # embed()
+            return redirect('articles:detail', article.pk)
+    else:
+        # form = ArticleForm(initial={    # 수정할 때 기존 정보 보여주기 위함
+        #     'title': article.title,
+        #     'content': article.content,
+        # })
+        form = ArticleForm(initial=article.__dict__) # 사용자가 입력한 값을 초기값으로 넘겨줌
+        # embed()
+    context = {'form': form, }
+    return render(request, 'articles/create.html', context)
+
+"""
+* CREATE & UPDATE는 html 파일 공유
+
+Creat 로직
+1. GET
+- 사용자가 데이터를 입력할 수 있는 빈 Form을 제공
+2. POST
+- 사용자가 보낸 새로운 글을 DB에 저장
+
+Update 로직
+1. GET
+- 기존 사용자의 글이 입력된 Form 제공
+2. POST
+- 수정된 글을 DB에 저장
+"""
+```
+
+
+
+
+
+### ModelForm 클래스
+
+: `models.py`에서 만든 모델이 있는데 굳이 form 모델을 다시 만들 필요 X
+
+==> 모델을 다시 정의할 필요가 없음
+
+- Form 클래스 : 모델에 대한 정보가 없음
+- ModelForm 클래스  : 모델에 대한 정보 있음
+
+```python
+# forms.py
+
+from django import forms
+from .models import Article
+
+# ModelForm
+class ArticleForm(forms.ModelForm):
+    class Meta:
+        model = Article
+        fields = '__all__'
+
+
+# class ArticleForm(forms.Form):
+#     title = forms.CharField(
+#         max_length=20,
+#         label='제목',
+#         widget=forms.TextInput(
+#             attrs={
+#                 'class': 'my-title',
+#                 'placeholder': 'Enter the title!',
+#             }
+#         )
+#     )
+#     content = forms.CharField(
+#         widget=forms.Textarea(
+#             attrs={
+#                 'class': 'my-content',
+#                 'placeholder': 'Enter the content!',
+#                 'rows': 5,
+#                 'cols': 50,
+#             }
+#         )
+#     )
+```
+
+
+
+`$ pip install django-bootstrap4`
+
+```python
+INSTALLED_APPS = [
+    'bootstrap4',
+]
+```
+
+```html
+{% load bootstrap4 %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% bootstrap_css %}
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+</html>
+```
 
