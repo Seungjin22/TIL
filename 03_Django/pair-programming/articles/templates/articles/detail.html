@@ -1,0 +1,35 @@
+{% extends 'articles/base.html' %}
+
+{% block body %}
+<h2 class="text-center">DETAIL</h2>
+<hr>
+    <p>글 제목: {{ article.title }}</p>
+    <p>글 내용: {{ article.content }}</p>
+    <p>작성 시간: {{ article.created_at }}</p>
+    <p>수정 시간: {{ article.updated_at }}</p>
+    <a href="{% url 'articles:update' article.pk %}" class="btn btn-success">글 수정</a>
+    <form action="{% url 'articles:delete' article.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="글 삭제" class="btn btn-danger">
+    </form>
+<hr>
+<p><b>새 댓글</b></p>
+<form action="{% url 'articles:comments_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <input type="submit" value="댓글 입력" class="btn btn-dark">
+</form>
+<hr>
+<p><b>댓글 목록</b></p>
+<p><b>현재까지 댓글 수 : {{ comments.count }}</b></p>  
+    {% for comment in comments %}
+        <hr>
+        <p>{{ comment.pk }}번 댓글: {{ comment.content }}</p>
+        <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="댓글 삭제" class="btn btn-warning">
+        </form>
+    {% endfor %}
+<hr>
+<a href="{% url 'articles:index' %}">[메인 페이지로]</a>
+{% endblock %}

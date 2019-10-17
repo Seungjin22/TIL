@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http  import require_POST
 from .models import Article, Comment
 from .forms import ArticleForm, CommentForm
 from IPython import embed
@@ -36,18 +37,23 @@ def create(request):
 def detail(request, article_pk):
     # article = Article.objects.get(pk=article_pk)
     article = get_object_or_404(Article, pk=article_pk)
-    # comment = get_object_or_404(Comment, pk=article_pk)
+    comments = article.comments.all()
     comment_form = CommentForm(request.POST)
-    context = {'article': article, 'comment_form': comment_form, }
+    context = {
+        'article': article,
+        'comments': comments,
+        'comment_form': comment_form,
+        }
     return render(request, 'articles/detail.html', context)
 
 
+@require_POST
 def delete(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
-    if request.method == 'POST':
-        article.delete()
-        return redirect('articles:index') # redirect ==> GET
-    return redirect('articles:detail', article.pk)
+    # if request.method == 'POST':
+    article.delete()
+    return redirect('articles:index') # redirect ==> GET
+    # return redirect('articles:detail', article.pk)
 
 
 def update(request, article_pk):
@@ -85,22 +91,23 @@ Update 로직
 - 수정된 글을 DB에 저장
 """
 
+@require_POST
 def comments_create(request, article_pk):
-    if request.method == 'POST':
-        article = get_object_or_404(Article, pk=article_pk)
-        comment_form = CommentForm(request.POST)
-        if comment_form.is_valid():
-            comment = comment_form.save(commit=False)
-            comment.article_id = article_pk
-            comment.save()
+    # article = get_object_or_404(Article, pk=article_pk)
+    # if request.method == 'POST':
+    comment_form = CommentForm(request.POST)
+    if comment_form.is_valid():
+        comment = comment_form.save(commit=False)
+        comment.article_id = article_pk
+        comment.save()
     return redirect('articles:detail', article_pk)
 
 
+@require_POST
 def comments_delete(request, article_pk, comment_pk):
-    if request.method =='POST':
-        article = get_object_or_404(Article, pk=article_pk)
-        comment = get_object_or_404(Comment, pk=comment_pk)
-        comment.delete()
+    # if request.method =='POST':
+    comment = get_object_or_404(Comment, pk=comment_pk)
+    comment.delete()
     return redirect('articles:detail', article_pk)
 
 

@@ -1,0 +1,19 @@
+{% extends 'articles/base.html' %}
+
+{% block body %}
+    <h2 class="text-center">ARTICLES</h2>
+    <br><br>
+    <h4>새 글 작성</h4>
+    <a href="{% url 'articles:create' %}" class="btn btn-light">새 글 작성하기</a>
+    {% for article in articles %}
+        <hr>
+        <p><b>[ {{ article.pk }}번 글 ]</b></p>
+        <p>▶ 제목: {{ article.title }}</p>
+        <a href="{% url 'articles:detail' article.pk %}">[상세 글 보기]</a>
+        {% empty %}
+        <p>작성된 게시글이 없습니다.</p>
+    {% endfor %}
+
+
+
+{% endblock %}

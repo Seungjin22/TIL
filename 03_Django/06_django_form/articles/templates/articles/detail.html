@@ -4,7 +4,7 @@
 {% block body %}
     <h2>DETAIL</h2>
     <hr>
-    <h3>{{ article.pk }}번째 글</h3>
+    <p><b>{{ article.pk }}번째 글</b></p>
     <p>제목: {{ article.title }}</p>
     <p>내용: {{ article.content }}</p>
     <p>생성 시각: {{ article.created_at|date:"SHORT_DATE_FORMAT" }}</p>
@@ -16,16 +16,16 @@
     </form>
     <a href="{% url 'articles:update' article.pk %}">[글 수정]</a>
     <hr>
-    <h4>새 댓글</h4>
-    <br>
+    <p><b>새 댓글</b></p>
     <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
         {% csrf_token %}
-        {{ comment_form.as_p }}
-        <input type="submit" value="댓글 입력">
+        {{ comment_form }}
+        <input type="submit" value="댓글 입력" class="btn btn-dark">
     </form>
     <hr>
     <h4>댓글 목록</h4>
-    {% for comment in article.comments.all %}
+    <p><b>현재까지 댓글 수 : {{ comments.count }}</b></p>
+    {% for comment in comments %}
         <hr>
         {% if request.resolver_match.url_name == 'comments_update' %}
             <form action="" method="POST">
@@ -44,11 +44,11 @@
         {% endif %}
             <form action="{% url 'articles:comments_update' article.pk comment.pk %}" method="POST">
                 {% csrf_token %}
-                <input type="submit" value="댓글 수정">
+                <input type="submit" value="댓글 수정" class="btn btn-warning">
             </form>
             <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
                 {% csrf_token %}
-                <input type="submit" value="댓글 삭제">
+                <input type="submit" value="댓글 삭제" class="btn btn-danger">
             </form>
     {% endfor %}
     <hr>

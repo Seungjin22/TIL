@@ -1,0 +1,28 @@
+{% extends 'articles/base.html' %}
+
+{% block body %}
+    
+    {% if request.resolver_match.url_name == 'create' %}
+    <h2 class="text-center">CREATE</h2>
+    {%  else %}
+    <h2 class="text-center">UPDATE</h2>
+    {% endif %}
+    <br>
+    <hr>
+    <br>
+    {% if request.resolver_match.url_name == 'create' %}
+        <form action="{% url 'articles:create' %}" method="POST">
+            {% csrf_token %}
+            {{ article_form.as_p }}
+            <input type="submit" value="작성" class="btn btn-primary">
+        </form>
+    {% else %}
+        <form action="{% url 'articles:update' article.pk %}" method="POST">
+            {% csrf_token %}
+            {{ article_form.as_p }}
+            <input type="submit" value="수정" class="btn btn-success">
+        </form>
+    {% endif %}
+        
+    
+{% endblock %}
