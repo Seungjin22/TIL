@@ -1081,6 +1081,7 @@ Locator는 그 자리에 가면 그 자원이 있어야!
 
 - 특징
   - Uniform
+  - Connectionless(비연결지향)
   - Stateless (무상태성)
   - Cacheable (캐시가능) : HTTP의 캐시 기능이 적용 가능함
   - Self-descriptiveness (자체표현구조) : REST API 메시지만 보고 상태와 행위
@@ -1821,5 +1822,178 @@ INSTALLED_APPS = [
     </div>
 </body>
 </html>
+```
+
+
+
+---
+
+
+
+### 인증(Authentication)과 권한
+
+
+
+쿠키는 서버의 자원을 이용하지 않음
+
+==> 나한테 저장하는 것
+
+쿠키는 일정 시간이 지나면 만료됨
+
+
+
+쿠키에 담겨진 세션 ID는 진짜 사용자 ID는 아님
+
+서버는 쿠키를 받아 세션 ID와 DB의 고객 ID가 일치하는지 확인하고 로그인 상태 유지
+
+
+
+- 회원가입 : user create
+
+- login : session create
+
+- logout : session delete
+- 회원정보 수정 : user update
+  - 사용자가 보면 안되는 정보까지 다 보여줌 ==> `CustomUserChangeForm`
+
+- 비밀번호 변경
+  - `update_session_auth_hash`
+- 회원탈퇴 : user delete
+
+
+
+- `@login_required` : 
+- 
+
+
+
+로그인한 상태로 다시 로그인 창 / 회원가입 창 뜨는 것 방지
+
+```python
+if request.user.is_authenticated:
+        return redirect('articles:index')
+```
+
+
+
+
+
+![](noteimage/delete.png)
+
+`@require_POST` 가 있을 때 `login_required`는 같이 사용할 수 없음!
+
+> ex) delete 하려고 할 때, delete는 POST 요청인데 redirect는 GET만 가능
+
+==> 내부 코드로 처리해주기
+
+
+
+
+
+모든 곳에서 `get_user_model()` ==> 이건 class
+
+하지만 딱 한 곳, `models.py`에서는 `settings.AUTH_USER_MODEL` ==> 이건 string
+
+```python
+# 1:N 관계 형성하기 위한 칼럼 추가
+
+from django.db import models
+from django.conf import settings
+
+class Article(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+```
+
+`AUTH_USER_MODEL`의 Default: `auth.USER`
+
+==> 생애주기 동안 수정하면 안돼!
+
+==> 무조건 **직접 참조 X**
+
+
+
+user모델 만들어서 article과 연결
+
+
+
+
+
+
+
+import hashlib
+
+hashlib.md5('up6760@gmail.com').hexdigest()
+
+hashlib.md5('up6760@gmail.com'.encode('utf-8')).hexdigest()
+
+
+
+encode().lower().strip())
+
+strip() : 공백 제거
+
+lower() : 대문자 소문자로 바꿔주기
+
+
+
+
+
+1번 글의 첫 번째/마지막 댓글 쓴 사람 이름
+
+```python
+In [21]: article1.comment_set.first().user.name
+Out[21]: 'Kim'
+
+In [23]: article1.comment_set.all()[0].user.name
+Out[23]: 'Kim'
+    
+In [24]: article1.comment_set.last().user.name
+Out[24]: 'Lee'
+```
+
+
+
+1번 글의 두번째에서 네번째까지의 댓글 / 첫번째에서 두번째 댓글
+
+```python
+In [26]: article1.comment_set.all()[1:4]
+Out[26]: <QuerySet [<Comment: 1글2댓글>, <Comment: 1글3댓글>, <Comment: 1글4댓글>]>
+    
+In [27]: article1.comment_set.all()[:2]
+Out[27]: <QuerySet [<Comment: 1글1댓글>, <Comment: 1글2댓글>]>
+```
+
+
+
+1번 글의 두번째 댓글을 쓴 사람의 첫번째 게시물의 작성자 이름
+
+```python
+In [29]: article1.comment_set.all()[1].user.article_set.all()[0].user.name
+Out[29]: 'Lee'
+```
+
+
+
+1번 댓글의 user 정보만 가져오면? (.values)
+
+```pyth
+In [48]: comment = Comment.objects.values('user').get(pk=1)
+
+In [49]: comment
+Out[49]: {'user': 1}
+```
+
+2번 사람이 작성한 댓글을 content 기준으로 내림차순
+
+```py
+In [51]: user2.comment_set.order_by('-content')
+Out[51]: <QuerySet [<Comment: 1글4댓글>, <Comment: 1글2댓글>, <Comment: !2글2댓글>, <Comment: !1글5댓글>]>
+```
+
+제목이 '1글'인 게시글
+
+```py
+In [52]: Article.objects.filter(title='1글')
+Out[52]: <QuerySet [<Article: 1글>]>
 ```
 

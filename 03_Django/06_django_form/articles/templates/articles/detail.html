@@ -10,19 +10,27 @@
     <p>생성 시각: {{ article.created_at|date:"SHORT_DATE_FORMAT" }}</p>
     <p>수정 시각: {{ article.updated_at|date:"M, j, Y" }}</p>
     <hr>
-    <form action="{% url 'articles:delete' article.pk %}" method="POST">
-        {% csrf_token %}
-        <input type="submit" value="글 삭제">
-    </form>
-    <a href="{% url 'articles:update' article.pk %}">[글 수정]</a>
-    <hr>
+    {% if request.user == article.user %}
+        <div class="form-inline">
+            <form action="{% url 'articles:delete' article.pk %}" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="글 삭제" class="btn btn-warning">
+            </form>
+            <a href="{% url 'articles:update' article.pk %}" class="btn btn-success">글 수정</a>
+        </div>
+        <hr>
+    {% endif %}
     <p><b>새 댓글</b></p>
-    <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
-        {% csrf_token %}
-        {{ comment_form }}
-        <input type="submit" value="댓글 입력" class="btn btn-dark">
-    </form>
-    <hr>
+    {% if user.is_authenticated %}
+        <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
+            {% csrf_token %}
+            {{ comment_form }}
+            <input type="submit" value="댓글 입력" class="btn btn-dark">
+        </form>
+    {% else %}
+        <a href="{% url 'accounts:login' %}">[댓글을 작성하려면 로그인을 해주세요.]</a>
+        <hr>
+    {% endif %}
     <h4>댓글 목록</h4>
     <p><b>현재까지 댓글 수 : {{ comments.count }}</b></p>
     {% for comment in comments %}
@@ -42,6 +50,7 @@
             <p>수정 시간: {{ comment.updated_at }}</p>
 
         {% endif %}
+        {% if request.user == comment.user %}
             <form action="{% url 'articles:comments_update' article.pk comment.pk %}" method="POST">
                 {% csrf_token %}
                 <input type="submit" value="댓글 수정" class="btn btn-warning">
@@ -50,6 +59,7 @@
                 {% csrf_token %}
                 <input type="submit" value="댓글 삭제" class="btn btn-danger">
             </form>
+        {% endif %}
     {% endfor %}
     <hr>
     <a href="{% url 'articles:index' %}">[메인 페이지로]</a>

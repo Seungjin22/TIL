@@ -1,15 +1,26 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http  import require_POST
+from django.contrib.auth.decorators import login_required
 from .models import Article, Comment
 from .forms import ArticleForm, CommentForm
+import hashlib
 from IPython import embed
 
 def index(request):
+    #1. session 정보에서 visits_num 이라는 키로 접근해 값을 가져옴
+    visits_num = request.session.get('visits_num', 0) # 해당 값이 없으면 0 가져옴
+
+    #2. 가져온 값을 session에 'visits_num' 이라는 새로운 키의 값으로 1씩 증가
+    request.session['visits_num'] = visits_num + 1
+    #3. session data를 수정하면 장고는 수정한 내용을 알 수 없어서 작성하는 구문
+    request.session.modified = True
+    # embed()
     articles = Article.objects.all()
-    context = {'articles': articles, }
+    context = {'articles': articles, 'visits_num': visits_num, }
     return render(request, 'articles/index.html', context)
 
 
+@login_required
 def create(request):
     """
     Form Class
@@ -25,7 +36,9 @@ def create(request):
         form = ArticleForm(request.POST)
         # 해당 폼이 유효한지 확인
         if form.is_valid():
-            article = form.save()
+            article = form.save(commit=False)
+            article.user_id = request.user.id
+            article.save()
             return redirect('articles:detail', article.pk)
     else:
         form = ArticleForm()
@@ -49,29 +62,26 @@ def detail(request, article_pk):
 
 @require_POST
 def delete(request, article_pk):
-    article = get_object_or_404(Article, pk=article_pk)
-    # if request.method == 'POST':
-    article.delete()
+    if request.user.is_authenticated:
+        article = get_object_or_404(Article, pk=article_pk)
+        if request.user == article.user:
+            article.delete()
     return redirect('articles:index') # redirect ==> GET
-    # return redirect('articles:detail', article.pk)
 
 
+@login_required
 def update(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
-    if request.method == 'POST':
-        # instance => 수정의 대상이 되는 특정한 글 객체
-        form = ArticleForm(request.POST, instance=article)
-        if form.is_valid():
-            form.save()
-            # embed()
-            return redirect('articles:detail', article.pk)
+    if request.user == article.user:
+        if request.method == 'POST':
+            form = ArticleForm(request.POST, instance=article)
+            if form.is_valid():
+                form.save()
+                return redirect('articles:detail', article.pk)
+        else:
+            form = ArticleForm(instance=article) # 사용자가 입력한 값을 초기값으로 넘겨줌
     else:
-        # form = ArticleForm(initial={    # 수정할 때 기존 정보 보여주기 위함
-        #     'title': article.title,
-        #     'content': article.content,
-        # })
-        form = ArticleForm(instance=article) # 사용자가 입력한 값을 초기값으로 넘겨줌
-        # embed()
+        return redirect('articles:index')
     context = {'form': form, 'article': article, }
     return render(request, 'articles/form.html', context)
 
@@ -95,19 +105,22 @@ Update 로직
 def comments_create(request, article_pk):
     # article = get_object_or_404(Article, pk=article_pk)
     # if request.method == 'POST':
-    comment_form = CommentForm(request.POST)
-    if comment_form.is_valid():
-        comment = comment_form.save(commit=False)
-        comment.article_id = article_pk
-        comment.save()
+    if request.user.is_authenticated:
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.article_id = article_pk
+            comment.user_id = request.user.id
+            comment.save()
     return redirect('articles:detail', article_pk)
 
 
 @require_POST
 def comments_delete(request, article_pk, comment_pk):
-    # if request.method =='POST':
-    comment = get_object_or_404(Comment, pk=comment_pk)
-    comment.delete()
+    if request.user.is_authenticated:
+        comment = get_object_or_404(Comment, pk=comment_pk)
+        if request.user == comment.user:
+            comment.delete()
     return redirect('articles:detail', article_pk)
 
 
