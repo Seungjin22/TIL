@@ -122,3 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# default: AUTH_USER_MODEL = 'auth.User'
+# AUTH_USER_MODEL = '앱이름.모델이름'
+AUTH_USER_MODEL = 'accounts.User'

@@ -5,11 +5,8 @@
     <p><b>{{ request.user.username }}님의 방문 횟수: {{ visits_num }}{% if visits_num == 1 %} time{% else %} times{% endif %}</b></p>
     <br>
     {% for article in articles %}
-        <p>글 작성자: {{ article.user }}</p>
-        <p>글 번호: {{ article.pk }}</p>
-        <p>글 제목: {{ article.title }}</p>
-        <a href="{% url 'articles:detail' article.pk %}">[글 상세보기]</a>
-        <hr>
+        {% include 'articles/_article.html' %}
+        <br>
     {% endfor %}
     {% if request.user.is_authenticated %}
         <a href="{% url 'articles:create' %}">[글 작성]</a>

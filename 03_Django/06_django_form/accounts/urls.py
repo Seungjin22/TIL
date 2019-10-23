@@ -10,4 +10,6 @@ urlpatterns = [
     path('delete/', views.delete, name='delete'),
     path('update/', views.update, name='update'),
     path('password/', views.change_password, name='change_password'),
+    # string은 <str: > 명시 안해주고 아래처럼 쓰면 됨
+    path('<username>/', views.profile, name='profile'),
 ]

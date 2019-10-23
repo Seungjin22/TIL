@@ -1997,3 +1997,116 @@ In [52]: Article.objects.filter(title='1글')
 Out[52]: <QuerySet [<Article: 1글>]>
 ```
 
+
+
+### Many to Many
+
+- `through` option 사용해서 중개 테이블 `reservation`을 통해 연결
+
+- `ManyToManyField` ==> join 테이블 하나 만들어줌
+
+  - `manytomany_patient_doctor`
+  - `앱 이름_테이블_테이블` 
+
+- 실제 field 하나가 추가되는게 아니라 **테이블 하나**가 만들어짐!
+
+  ```python
+  # models.py
+  
+  class Patient(models.Model):
+      name = models.TextField()
+      doctors = models.ManyToManyField(Doctor, through="Reservation")
+  ```
+
+  ==> Reservation 중개모델 거치지 않고 가능
+
+  ```python
+  # 원래 이렇게 reservation을 거쳐야 했으나
+  In [3]: patient1.reservation_set.all()
+  Out[3]: <QuerySet [<Reservation: 1번 의사의 1번 환자>, <Reservation: 2번 의사의 1번 환자>]>
+  
+  # 이제 이렇게 가능
+  In [4]: patient1.doctors.all()
+  Out[4]: <QuerySet [<Doctor: 1번 의사 justin>, <Doctor: 2번 의사 zzulu>]>
+  ```
+
+  
+
+manytomany reservation 테이블(중개 테이블)
+
+| #    | id   | doctor_id | patient_id |
+| ---- | ---- | --------- | ---------- |
+| 1    | 1    | 1         | 1          |
+| 2    | 2    | 1         | 2          |
+| 3    | 3    | 2         | 1          |
+
+
+
+- 
+
+  ```python
+  In [1]: doctor1 = Doctor.objects.create(name='justin')
+  
+  In [2]: patient1 = Patient.objects.create(name='tak')
+  
+  # 이제 이렇게 예약 추가
+  In [3]: doctor1.patients.add(patient1)
+  
+  # 이렇게 서로를 바로 부를 수 있음
+  In [4]: doctor1.patients.all()
+  Out[4]: <QuerySet [<Patient: 1번 환자 tak>]>
+  
+  In [5]: patient1.doctors.all()
+  Out[5]: <QuerySet [<Doctor: 1번 의사 justin>]>
+  
+  # 예약 취소
+  In [6]: doctor1.patients.remove(patient1)
+  
+  In [7]: doctor1.patients.all()
+  Out[7]: <QuerySet []>
+  
+  In [8]: patient1.doctors.all()
+  Out[8]: <QuerySet []>
+  ```
+
+  
+
+N:N의 관계는 어려운게 어떤 걸 1로 두고 할 것인지가 개발자 마음!
+
+
+
+### 좋아요
+
+
+
+```python
+- user.article_set.all() : 유저가 쓴 게시글을 전부(1:N)
+- user.like_articles.all() : 유저가 좋아요를 누른 게시글 전부(M:N)
+
+- articles.like_users.all() : 게시글에 좋아요를 누른 유저 전부(M:N)
+- article.user : 게시글을 작성한 유저(1:N)
+```
+
+
+
+### 팔로워
+
+```python
+# models.py
+
+from django.db import models
+from django.conf import settings
+from django.contrib.auth.models import AbstractUser
+
+class User(AbstractUser):
+    followers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="followings")
+```
+
+```python
+# settings.py
+
+# default: AUTH_USER_MODEL = 'auth.User'
+# AUTH_USER_MODEL = '앱이름.모델이름'
+AUTH_USER_MODEL = 'accounts.User'
+```
+

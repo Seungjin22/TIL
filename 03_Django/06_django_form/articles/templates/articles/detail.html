@@ -4,6 +4,8 @@
 {% block body %}
     <h2>DETAIL</h2>
     <hr>
+    {% include "articles/_follow.html" %}
+    <hr>
     <p><b>{{ article.pk }}번째 글</b></p>
     <p>제목: {{ article.title }}</p>
     <p>내용: {{ article.content }}</p>

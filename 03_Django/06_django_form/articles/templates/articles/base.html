@@ -1,5 +1,4 @@
 {% load bootstrap4 %}
-{% load gravatar %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/a6657d039c.js" crossorigin="anonymous"></script>
     {% bootstrap_css %}
     <style>
         div > h3 {
@@ -16,25 +16,8 @@
     <title>Document</title>
 </head>
 <body>
+    {% include 'articles/_nav.html' %}
     <div class="container">
-        {% if user.is_authenticated %}
-            <h3>
-                <img src="https://s.gravatar.com/avatar/{{ user.email|makemd5 }}/?s=80&d=monsterid" alt="">
-                Hello, {{ user.username }} |
-                <a href="{% url 'accounts:logout' %}">LOGOUT</a> |
-                <a href="{% url 'accounts:update' %}">USER UPDATE</a> |
-                <a href="{% url 'accounts:change_password' %}">CHANGE PASSWORD</a> |
-                <form action="{% url 'accounts:delete' %}" method="POST" style="display: inline;">
-                    {% csrf_token %}
-                    <input type="submit" value="회원탈퇴" class="btn btn-danger">
-                </form>
-            </h3>
-        {% else %} 
-            <h3>
-                <a href="{% url 'accounts:login' %}">LOGIN</a> |
-                <a href="{% url 'accounts:signup' %}">SIGNUP</a> |
-            </h3>
-        {% endif %}
         {% block body %}
         {% endblock %}
     </div>
