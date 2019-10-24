@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f5a0006-3409-4b37-9b06-85e32225cd33" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/03_Django/06_django_form/articles/templates/articles/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/06_django_form/articles/templates/articles/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Django/06_django_form/articles/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/06_django_form/articles/templates/articles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Django/06_django_form/articles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/06_django_form/articles/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Django/06_django_form/myform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/06_django_form/myform/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Django/06_django_form/myform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/06_django_form/myform/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/03_Django/Django.md" beforeDir="false" afterPath="$PROJECT_DIR$/03_Django/Django.md" afterDir="false" />
-    </list>
+    <list default="true" id="4f5a0006-3409-4b37-9b06-85e32225cd33" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,14 +12,14 @@
     <session id="1725412191">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.2" value="6" />
+          <entry key="project.open.time.2" value="7" />
           <entry key="project.open.time.3" value="12" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -152,7 +145,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +156,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -503,246 +496,56 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/10_DivideandConquer/병합정렬(Merge Sort).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/10_DivideandConquer/병합정렬(Merge Sort).py" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190919/5208_input.txt" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190919/5208_전기버스2.py" />
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/10_DivideandConquer/퀵 정렬(Quick Sort).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5189_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5202_화물 도크.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5201_컨테이너 운반.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/10_DivideandConquer/퀵 정렬(Quick Sort).py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5189_input.txt" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5202_화물 도크.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5201_컨테이너 운반.py" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190919/5204_병합 정렬.py" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190919/5207_이진 탐색.py" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190919/5209_input.txt" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190919/5209_최소 생산 비용.py" />
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190827/4881_arraysum.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5189_전자카트.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5188_최소합.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/AfterClass/For A/1486_장훈이선반(승진).py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5204_병합 정렬.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5205_퀵 정렬.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5207_이진 탐색.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/AfterClass/For A/1486_장훈이의 높은 선반.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5208_전기버스2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190827/4881_arraysum.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5189_전자카트.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190918/5188_최소합.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/AfterClass/For A/1486_장훈이선반(승진).py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5204_병합 정렬.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5205_퀵 정렬.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5207_이진 탐색.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/AfterClass/For A/1486_장훈이의 높은 선반.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5208_전기버스2.py" />
     <entry file="file://$PROJECT_DIR$/Line/Line/문제4.py" />
     <entry file="file://$PROJECT_DIR$/Line/Line/문제2.py" />
     <entry file="file://$PROJECT_DIR$/Line/Line/문제1.py" />
     <entry file="file://$PROJECT_DIR$/Line/Line/문제3.py" />
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5209_최소 생산 비용.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190920/5209_최소 생산 비용.py" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/최소.txt" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/최소.py" />
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/5249_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/5249_input.txt" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/최소2.txt" />
     <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/최소2.py" />
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(5250)최소비용_bfs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(5250)최소비용_n^2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(5250)최소비용_heap.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/5249_(KRUSKAL)최소 신장 트리.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-371">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/1244_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/7465_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/1861_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="709" selection-start-line="709" selection-end-line="709" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/5249_(Prim)최소 신장 트리.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/7465_창용 마을 무리의 개수.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="34" lean-forward="true" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(1244)최대상금.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/1861_정사각형 방.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/부분집합 합 구하기.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/순열.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/06_Combination/조합_계산.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/06_Combination/Combination.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190926/1263_사람 네트워크2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/부분집합.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/연습1_선택정렬.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/재귀_10까지의합.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/06_Combination/혀니가 알려준 순열, 조합.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190926/1263_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(5250)최소비용_bfs.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(5250)최소비용_n^2.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(5250)최소비용_heap.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/5249_(KRUSKAL)최소 신장 트리.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/1244_input.txt" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/7465_input.txt" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/1861_input.txt" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190923/5249_(Prim)최소 신장 트리.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/7465_창용 마을 무리의 개수.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/(1244)최대상금.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190925/1861_정사각형 방.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/부분집합 합 구하기.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/순열.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/06_Combination/조합_계산.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/06_Combination/Combination.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190926/1263_사람 네트워크2.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/부분집합.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/연습1_선택정렬.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/09_Advanced/재귀_10까지의합.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/06_Combination/혀니가 알려준 순열, 조합.py" />
+    <entry file="file://$PROJECT_DIR$/04_Algorithm/Problem Solving/190926/1263_input.txt" />
   </component>
 </project>

@@ -2110,3 +2110,49 @@ class User(AbstractUser):
 AUTH_USER_MODEL = 'accounts.User'
 ```
 
+
+
+### 해시태그
+
+게시글 : 해시태그 = M : N 관계
+
+
+
+### 소셜 로그인
+
+`$ pip install django-allauth`
+
+- 굉장히 많은 소셜 로그인 지원
+
+```python
+# settings.py/myform
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+INSTALLED_APPS = [
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.kakao',
+]
+
+SITE_ID = 1
+```
+
+```python
+# urls.py/myform
+
+urlpatterns = [
+    path('accounts/', include('allauth.urls')),
+]
+```
+
+makemigrations 필요없이 바로 migrate
+
+`$ python manage.py migrate`
+
+
+

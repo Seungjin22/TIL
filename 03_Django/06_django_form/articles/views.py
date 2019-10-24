@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http  import require_POST
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
-from .models import Article, Comment
+from .models import Article, Comment, Hashtag
 from .forms import ArticleForm, CommentForm
 import hashlib
 from IPython import embed
@@ -40,6 +40,14 @@ def create(request):
             article = form.save(commit=False)
             article.user_id = request.user.id
             article.save()
+            #1. content를 공백 기준으로 리스트로 변경 후 for문
+            for word in article.content.split():
+                #2. '#'으로 시작하는 요소를 선택
+                if word.startswith('#'):
+                    #3. word랑 같은 해시 태그를 찾고 있으면 기존 객체를, 없으면 새로운 객체 생성
+                    hashtag, created = Hashtag.objects.get_or_create(content=word)
+                    #4. 게시글의 해시태그 목록에 해당 단어를 추가
+                    article.hashtags.add(hashtag)
             return redirect('articles:detail', article.pk)
     else:
         form = ArticleForm()
@@ -79,7 +87,12 @@ def update(request, article_pk):
         if request.method == 'POST':
             form = ArticleForm(request.POST, instance=article)
             if form.is_valid():
-                form.save()
+                article = form.save()
+                article.hashtags.clear()
+                for word in article.content.split():
+                    if word.startswith('#'):
+                        hashtag, created = Hashtag.objects.get_or_create(content=word)
+                        article.hashtags.add(hashtag)
                 return redirect('articles:detail', article.pk)
         else:
             form = ArticleForm(instance=article) # 사용자가 입력한 값을 초기값으로 넘겨줌
@@ -171,3 +184,12 @@ def follow(request, article_pk, user_pk):
         # 팔로우
         person.followers.add(user)
     return redirect('articles:detail', article_pk)
+
+
+@login_required
+def hashtag(request, hash_pk):
+    hashtag = get_object_or_404(Hashtag, pk=hash_pk)
+    articles = hashtag.article_set.order_by('-pk')
+    context = {'hashtag': hashtag, 'articles': articles, }
+    return render(request, 'articles/hashtag.html', context)
+

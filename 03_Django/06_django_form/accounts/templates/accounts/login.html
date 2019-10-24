@@ -1,18 +1,13 @@
 {% extends 'articles/base.html' %}
 {% load bootstrap4 %}
+{% load socialaccount %}
 
 {% block body %}
-{% if request.resolver_match.url_name == 'signup' %}
-    <h1>SIGNUP</h1>
-{% elif request.resolver_match.url_name == 'update' %}
-    <h1>USER UPDATE</h1>
-{% else %}
-    <h1>CHANGE_PASSWORD</h1>
-{% endif %}
-
+<h1>LOGIN</h1>
 <form action="" method="POST">
     {% csrf_token %}
     {% bootstrap_form form %}
     {% buttons submit="Submit" reset="Cancel"%}{% endbuttons %}
 </form>
+<a href="{% provider_login_url 'kakao' %}" class="btn btn-warning">KAKAO LOGIN</a>
 {% endblock %}
