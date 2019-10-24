@@ -1,0 +1,15 @@
+{% extends 'articles/base.html' %}
+{% block body %}
+    <h2 class="text-center">Main Page</h2>
+    <br>
+    <br>
+    <h3>글 목록</h3>
+    {% for article in articles %}
+        <hr>
+        <p><b>{{ article.pk }}번째 글</b></p>
+        <p>글 제목: <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></p>
+        <p>글 내용: {{ article.content }}</p>
+    {% endfor %}
+    <hr>
+    <a href="{% url 'articles:create' %}">새 글 작성하기</a>
+{% endblock %}

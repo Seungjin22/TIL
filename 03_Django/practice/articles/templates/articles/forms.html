@@ -1,0 +1,17 @@
+{% extends 'articles/base.html' %}
+{% block body %}
+    {% if request.resolver_match.url_name == 'create' %}
+    <h2 class="text-center">CREATE</h2>
+    {% else %}
+    <h2 class="text-center">UPDATE</h2>
+    {% endif %}
+    <br>
+    <br>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ article_form.as_p }}
+        <input type="submit" value="입력">
+    </form>
+    <hr>
+    <a href="{% url 'articles:index' %}">메인 페이지로</a>
+{% endblock %}

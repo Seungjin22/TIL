@@ -2003,7 +2003,7 @@ Out[52]: <QuerySet [<Article: 1글>]>
 
 - `through` option 사용해서 중개 테이블 `reservation`을 통해 연결
 
-- `ManyToManyField` ==> join 테이블 하나 만들어줌
+- `ManyToManyField` ==> ★ **join 테이블 하나 만들어줌!!** (필드 추가 X)
 
   - `manytomany_patient_doctor`
   - `앱 이름_테이블_테이블` 
@@ -2075,9 +2075,13 @@ N:N의 관계는 어려운게 어떤 걸 1로 두고 할 것인지가 개발자 
 
 
 
+---
+
+
+
 ### 좋아요
 
-
+user 모델은 Django에 내장되어 있음!
 
 ```python
 - user.article_set.all() : 유저가 쓴 게시글을 전부(1:N)
