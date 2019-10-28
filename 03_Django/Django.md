@@ -1067,7 +1067,7 @@ Locator는 그 자리에 가면 그 자원이 있어야!
 
 ### RESTful (Representational State Transfer)
 
-: 웹의 장점을 활용하는 것에 대한 철학(생각) / 자원과 행위를 잘 표현 하자는 철학(생각) or 설계
+: 웹의 장점을 활용하는 것에 대한 철학(생각) / 자원과 행위를 잘 표현 하자는 철학(생각) or 설계 ==> 전송의 상태를 표현
 
 
 
@@ -2160,3 +2160,177 @@ makemigrations 필요없이 바로 migrate
 
 
 
+
+
+## REST API
+
+각 요청이 어떠한 동작&정보를 위한 것인지 **요청 형식 자체(주소)로 파악이 가능**한 것
+
+
+
+|  CRUD  | HTTP Method |
+| :----: | :---------: |
+| CREATE |    POST     |
+|  READ  |     GET     |
+| UPDATE | PUT / PATCH |
+| DELETE |   DELETE    |
+
+
+
+Django에는 REST API 서버를 쉽게 개발할 수 있도록 **djangorestframework** 제공
+
+`$ pip install djangorestframework`
+
+
+
+The output of `dumpdata` can be used as input for `loaddata`
+
+- `--indent`` INDENT`
+
+Specifies the number of indentation spaces to use in the output. Defaults to `None` which displays all data on single line.
+
+
+
+`$ python manage.py dumpdata --indent 2 musics > dummy.json`
+
+```json
+// dummy.json ==> 이런 식으로 만들어짐
+
+[
+{
+  "model": "musics.artist",
+  "pk": 1,
+  "fields": {
+    "name": "\uc544\uc774\uc720"
+  }
+},
+{
+  "model": "musics.artist",
+  "pk": 2,
+  "fields": {
+    "name": "10cm"
+  }
+},
+    ...
+]
+```
+
+```text
+musics(앱)
+	fixtures	            // 여기까진 자동 인식
+		musics(앱 이름)	  // name space 구분
+			{}dummy.json	// 이 아래에 넣어주기
+```
+
+
+
+`$ python manage.py loaddata musics/dummy.json`
+
+
+
+#### What’s a “fixture”?
+
+A *fixture* is a collection of files that contain the serialized contents of the database.
+
+
+
+#### serializing
+
+
+
+: 응답을 json 형태로 return 할 수 있도록 자동으로 알아서 바꿔주는 작업
+
+
+
+api 서버명을 명시해주기! 뒤에 버전명도 붙여주기
+
+```python
+# urls.py / 프로젝트(api)
+
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    # 'musics(앱 이름)/'가 아닌 'api서버명/버전명/'
+    path('api/v1/', include('musics.urls')),
+    path('admin/', admin.site.urls),
+]
+```
+
+
+
+```python
+# views.py
+
+from django.shortcuts import render
+from .models import Music
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import MusicSerializer
+
+
+@api_view(['GET'])
+def music_list(request):
+    musics = Music.objects.all()
+    # serializer: musics(queryset) ==> json
+    serializer = MusicSerializer(musics, many=True) # many=True는 여러개의 옵션이 들어가는 QuerySet이라서!
+    return Response(serializer.data)
+```
+
+
+
+drf-yasg
+
+- swagger
+
+
+
+Post Man
+
+우리 대신 요청 보내줄 수 있는 유용
+
+
+
+data를 원하는 사용자의 요청을 받아서 json 형태로 바꿔서 응답
+
+사용자의 요청에 응답을 해주기 위한 rest api 서버를 만드는 중
+
+
+
+
+
+```python
+from django.urls import path
+from . import views
+from drf_yasg.views import get_schema_view
+from drf_yasg import openapi
+
+schema_view = get_schema_view(
+    openapi.Info(
+        # 필수인자
+        title="Music API",
+        default_version="v1",
+        # 선택인자
+        description="음악관련 API 서비스입니다.",
+        terms_of_service="https://www.google.com/pilicies/terms/",
+        contact=openapi.Contact(email="up6760@gmail.com"),
+        license=openapi.License(name="SSAFY License"),
+    )
+)
+
+app_name = 'musics'
+
+urlpatterns = [
+    path('musics/', views.music_list, name='music_list'),
+    path('musics/<int:music_pk>/', views.music_detail, name='music_detail'),
+    path('musics/<int:music_pk>/comments/', views.comments_create, name='comments_create'),
+    path('comments/<int:comment_pk>/', views.comments_update_and_delete, name='comments_update_and_delete'),
+    path('artists/', views.artist_list, name='artist_list'),
+    path('artists/<int:artist_pk>/', views.artist_detail, name='artist_detail'),
+    path('docs/', schema_view.with_ui('redoc'), name='api_docs'),
+    path('swagger/', schema_view.with_ui('swagger'), name='api_swagger'),
+]
+```
+
+- `comments_update` 랑 `comments_delete` 의 주소가 같음
+- Methods 가 다르니까 주소가 같아도 상관 無
