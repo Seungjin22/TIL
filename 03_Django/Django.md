@@ -2334,3 +2334,11 @@ urlpatterns = [
 
 - `comments_update` 랑 `comments_delete` 의 주소가 같음
 - Methods 가 다르니까 주소가 같아도 상관 無
+
+
+
+
+
+우리집 주소 자체는 URN
+
+URI URL 그렇게 엄격하게 구분하고 있진 않음
