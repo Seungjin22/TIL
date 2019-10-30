@@ -18,7 +18,7 @@ console.log(a)
 a = 10
 // 4. 최종 출력
 console.log(a)
-*/
+
 console.log(b)
 let b = 10
 console.log(b)
@@ -42,4 +42,47 @@ console.log(b)
 //3. 초기화(초기에는 값이 없기 때문에 undefined 할당)
 //4. 할당
 
-// HOISTING은 선언이 위로 올라가는 것!!!
+// HOISTING은 선언이 위로 올라가는 것!!! 선언을 끌어올리는 것
+
+let foo
+let bar = undefined
+
+console.log(foo)
+console.log(bar)
+
+x
+let x = 1
+
+
+y // 아무것도 안붙이면 자동으로 var를 붙여줌
+var y = 1
+console.log(y)
+
+var y // 1. 선언이 끌어 올려진다. 이때 초기화가 같이 이루어지고 값이 없어서 undefined를 넣어준다.
+y = 1 // 2. 값이 할당된다.
+console.log(y) // 3. 값이 출력된다.
+
+////////////////////////////
+var x // 선언 hoisting
+var y // 선언 hoisting
+
+if (x !== 1) {
+  console.log(y)
+  var y = 3
+  if (y === 3) {
+    var x = 1
+  }
+  console.log(y)
+}
+
+if (x === 1) {
+  console.log(y)
+}
+
+x = 7
+console.log(x)
+
+// undefined - 3 - 3 - 7
+// var는 블록 스코프 아님!
+///////////////////////////
+*/
