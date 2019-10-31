@@ -277,7 +277,7 @@ const user = USERS.find(function(user) {
 // 화살표 문법으로 리팩토링
 const user = USERS.find( user => user.name === 'Tony Stark')
 console.log(user)
-*/
+
 
 //6. some & every
 // some과 every는 대상 배열에서 특정 요소를 뽑거나, 배열을 return하지 않고
@@ -292,4 +292,34 @@ console.log(result) // true
 // every
 // 배열 내의 "모든 요소가" 주어진 함수를 통과하는지 테스트하고 결과에 따라 boolean return
 const result2 = arr.every( elem => elem % 2 === 0 )
-console.log(result2)
+console.log(result2) // false -> 1, 3, 5 는 홀수니까
+*/
+
+// find Ex1.
+// PEOPLE 중에 admin 권한을 가진 요소를 찾아서 admin 상수에 저장해보자!
+
+const PEOPLE = [
+  { id: 1, admin: false },
+  { id: 2, admin: false },
+  { id: 3, admin: true },
+]
+const admin = PEOPLE.find( person => person.admin === true)
+console.log(admin)
+
+
+// some & every Ex1.
+const COMPUTERS = [
+  { name: 'macbook', ram: 16, },
+  { name: 'gram', ram: 8, },
+  { name: 'series9', ram: 32, },
+]
+
+//1. some
+const someComputersAvailable = COMPUTERS.some(function(computer){
+  return computer.ram > 16
+})
+console.log(someComputersAvailable)
+
+//2. every
+const everyComputersAvailable = COMPUTERS.every( computer => computer.ram > 16)
+console.log(everyComputersAvailable)

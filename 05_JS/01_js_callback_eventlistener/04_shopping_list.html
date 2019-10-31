@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>My Shopping List</h1>
+  Enter a new item: <input id="item-input" type="text">
+  <button id="add-button">Add Item</button>
+  <ul id="shopping-list">
+
+  </ul>
+  
+  <script>
+    const input = document.querySelector('#item-input')
+    const button = document.querySelector('#add-button')
+    const shoppingList = document.querySelector('#shopping-list')
+    button.addEventListener('click', function(){
+      const itemName = input.value
+      input.value = ''
+      const item = document.createElement('li')
+      item.innerText = itemName
+      
+      // DELETE 버튼 로직 구현
+      //1. 버튼 태그 추가
+      const deleteButton = document.createElement('button')
+
+      //2. deleteButton 변수에 delete라는 텍스트를 추가하자!
+      deleteButton.innerText = 'delete'
+
+      //3. item(li 태그)에 deleteButton을 추가하자 -> 아이템마다 delete 버튼이 필요
+      item.append(deleteButton)
+      
+      shoppingList.append(item)
+      
+      //4. deleteButton 삭제 로직 구현
+      deleteButton.addEventListener('click', function(){
+        item.remove()
+      })
+    })
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Clicked</title>
+</head>
+<body>
+  <h1>0</h1>
+  <button id="change-btn">Click it</button>
+  <script>
+    // #change-btn을 button 상수에 할당한다.
+    const button = document.querySelector('#change-btn')
+    // h1 태그를 header 상수에 할당한다.
+    const header = document.querySelector('h1')
+    // clickCount 변수를 0으로 초기화 한다.
+    let clickCount = 0
+    // button에 'click' eventListener를 추가한다. 클릭이 발생하면,
+    button.addEventListener('click', function() {
+      // clickCount가 1씩 증가한다.
+      clickCount += 1
+      // header 안의 내용을 clickCount로 변경한다.
+      header.innerText = clickCount
+    })
+  </script>
+</body>
+</html>

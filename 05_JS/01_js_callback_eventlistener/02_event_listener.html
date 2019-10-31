@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="my">
+
+  </div>
+  <button id="this-button">Click me</button>
+  <script>
+    //1. 무엇을 -> 버튼을(EventTarget)
+    const button = document.querySelector('#this-button')
+
+    //2. 언제 -> 버튼(EventTarget)을 클릭(click!)하면 area에 div태그(id->my)를 담는다.
+    button.addEventListener('click', function(){
+      const area = document.querySelector('#my')
+
+    //3. 어떻게 -> 리스너 내의 콜백 함수 실행
+    area.innerHTML = '<h1>뿅</h1>'
+    })
+
+    
+  </script>
+</body>
+</html>

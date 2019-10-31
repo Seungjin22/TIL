@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .bg {
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+        <img
+            id="dino"
+            width="100px"
+            height="100px"
+            src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/88/e5/36/88e536d4-8a08-7c3b-ad29-c4e5dabc9f45/AppIcon-1x_U007emarketing-sRGB-85-220-0-6.png/246x0w.jpg"
+            alt="google-dino"
+        />
+  </div>
+  <div class="bg">
+          <img
+              id="dino-2"
+              width="100px"
+              height="100px"
+              src="https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/88/e5/36/88e536d4-8a08-7c3b-ad29-c4e5dabc9f45/AppIcon-1x_U007emarketing-sRGB-85-220-0-6.png/246x0w.jpg"
+              alt="google-dino"
+          />
+    </div>
+    
+    <script>
+      const dino = document.querySelector('#dino')
+      let xlet = 0
+      let ylet = 0
+      document.addEventListener('keydown', function(e) {
+        console.log(e)
+        if (e.key === ' ') {
+          console.log('spacebar')
+        } else if (e.code === 'ArrowLeft') {
+          console.log('left')
+          xlet -= 20
+        } else if (e.code === 'ArrowUp') {
+          console.log('up')
+          ylet -= 20
+        } else if (e.keyCode === 39) {
+          console.log('right')
+          xlet += 20
+        } else if (e.code === 'ArrowDown') {
+          console.log('down')
+          ylet += 20
+        } else {
+          console.log('잘못된 Key를 눌렀어요!!!')
+        }
+        dino.style.marginLeft = `${xlet}px`
+        dino.style.marginTop = `${ylet}px`
+      })
+
+      dino.style.position = 'absolute'
+      dino.addEventListener('mouseover', function() {
+        const newWidth = window.innerWidth * Math.random() - window.innerWidth / 2
+        const newHeight = window.innerHeight * Math.random() - window.innerHeight / 2
+
+        // 왼쪽, 위쪽의 마진값을 새로 설정
+        dino.style.marginLeft = newWidth + 'px'
+        dino.style.marginTop = newHeight + 'px'
+      })
+    </script>
+  </body>
+</html>
