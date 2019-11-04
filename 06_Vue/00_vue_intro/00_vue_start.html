@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- DOM은 그냥 껍데기. 보여주기 위한 역할만 하는 곳 -->
+  <div id="app">
+    {{ message }} - {{ count }}
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    // Vue 코드가 작성될 곳
+    const app = new Vue({ // new는 클래스라는 것
+      // element. 이 아래 한 줄로 vue instance와 연결
+      el: '#app',
+      data: {
+        message: 'Hello, Vue!',
+        count: 0,
+      },
+      methods: {
+        // 표현식
+        plus: function() {
+          this.count++
+        },
+        // 선언식
+        minus () {
+          this.count--
+        }
+      }
+    })
+  </script>
+</body>
+</html>

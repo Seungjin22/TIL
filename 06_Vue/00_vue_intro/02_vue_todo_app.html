@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <img v-bind:src="vueImage">
+    <li v-for="todo in todos" v-if="!todo.completed" v-on:click="check(todo)">
+      {{ todo.content }}
+    </li>
+    <li v-else v-on:click="check(todo)">[완료!]</li>
+    <div>
+      <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
+    </div>
+  </div>
+
+    <!-- view 만드는 script가 위에 여기 있어야! -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        // DOM(View)와 Vue instance(View-Model)을 연결(mount)
+        el: '#app',
+        data: {
+          todos: [
+            {
+              content: '점심 메뉴 고민하기',
+              completed: true,
+            },
+            {
+              content: '사다리 타기',
+              completed: false,
+            },
+            {
+              content: '약속의 2시, 낮잠 자기',
+              completed: false,
+            },
+            {
+              content: '야자하기',
+              completed: false,
+            },
+            {
+              content: '비쥬 얼 스튜디오 설치하기',
+              completed: false,
+            }
+          ],
+          newTodo: '',
+          vueImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTcMuMHBi03LuaJDPbiVUSzxYBKKfZ5GWdxbE2p_0o5m-CipEHX'
+        },
+        methods: {
+          check: function(todo) {
+            todo.completed = !todo.completed
+          },
+          addTodo: function() {
+            this.todos.push({
+              content: this.newTodo,
+              completed: false,
+            })
+            this.newTodo = ''
+          }
+        }
+      })
+    </script>
+</body>
+</html>

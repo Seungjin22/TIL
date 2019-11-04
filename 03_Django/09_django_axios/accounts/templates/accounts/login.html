@@ -1,0 +1,13 @@
+{% extends 'articles/base.html' %}
+{% load bootstrap4 %}
+{% load socialaccount %}
+
+{% block body %}
+<h1>LOGIN</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons submit="Submit" reset="Cancel"%}{% endbuttons %}
+</form>
+<a href="{% provider_login_url 'kakao' %}" class="btn btn-warning">KAKAO LOGIN</a>
+{% endblock %}

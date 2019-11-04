@@ -1,0 +1,23 @@
+<div class="card">
+    <h5 class="card-header">
+        글 작성자: <a href="{% url 'accounts:profile' article.user.username %}" class="card-link">{{ article.user }}</a>
+    </h5>
+    <div class="card-body">
+        <h5 class="card-title">글 제목: {{ article.title }}</h5>
+        <p>글 번호: {{ article.pk }}</p>
+        <p class="card-text">
+            <i class="{% if user in article.like_users.all %}
+            fas
+            {% else %}
+            far
+            {% endif %} fa-heart like-button"
+            data-id="{{ article.pk }}"
+            style="color:crimson"
+            >
+            </i>
+            <span id="like-count-{{ article.pk }}" class="card-text">{{ article.like_users.count }}</span>명이 이 글을 좋아합니다.
+            <hr>
+        </p>
+        <a href="{% url 'articles:detail' article.pk %}" class="btn btn-primary">글 상세보기</a>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <button v-on:click="getDogImage">멍멍</button>
+    <br>
+    <!-- 3. 그 이미지가 여기서 뜸 -->
+    <img v-bind:src="image">
+  </div>
+  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        //1. 이 이미지는
+        image: '',
+      },
+      methods: {
+        getDogImage: function() {
+          const URL = 'https://dog.ceo/api/breeds/image/random'
+          axios.get(URL)
+          .then(res => {
+            //2. 요청 올때마다 이걸로 대체
+            this.image = res.data.message
+          })
+        }
+      }
+    })
+  </script>
+</body>
+</html>

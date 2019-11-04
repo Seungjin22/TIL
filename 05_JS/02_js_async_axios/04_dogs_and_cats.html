@@ -16,6 +16,7 @@
   <h1>댕댕이</h1>
   <div class="animals"></div>
   <button id="dog">댕댕이 내놔</button>
+  <button id="cat">냥냥이 내놔</button>
 
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
@@ -36,8 +37,21 @@
       .catch(err => console.log(err))
     }
 
+    const getCatImage = () => {
+      axios.get('https://api.thecatapi.com/v1/images/search')
+      .then(res => {
+        const imgUrl = res.data[0].url
+        const imgTag = document.createElement('img')
+        imgTag.src = imgUrl
+        document.querySelector('.animals').append(imgTag)
+      })
+      .catch(err => console.log(err))
+    }
     const dogButton = document.querySelector('#dog')
     dogButton.addEventListener('click', getDogImage)
+
+    const catButton = document.querySelector('#cat')
+    catButton.addEventListener('click', getCatImage)
   </script>
 </body>
 </html>

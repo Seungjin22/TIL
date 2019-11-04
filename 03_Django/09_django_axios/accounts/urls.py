@@ -1,0 +1,15 @@
+from django.urls import path
+from . import views
+
+app_name = 'accounts'
+
+urlpatterns = [
+    path('signup/', views.signup, name='signup'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('delete/', views.delete, name='delete'),
+    path('update/', views.update, name='update'),
+    path('password/', views.change_password, name='change_password'),
+    # string은 <str: > 명시 안해주고 아래처럼 쓰면 됨
+    path('<username>/', views.profile, name='profile'),
+]

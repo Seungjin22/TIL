@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input id="vue-input" type="text" v-model="message">
+    <p id="vue-p">{{ message }}</p>
+  </div>
+
+  <input id="js-input" type="text">
+  <p id="js-p"></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        message: '',
+      }
+    })
+  </script>
+
+  <script>
+    //1. 이벤트를 등록할 element 찾기
+    const input = document.querySelector('input')
+    //2. 이벤트 등록
+    input.addEventListener('keydown', function(e){
+      //3. 데이터를 바꿀 element 찾기
+      const value = e.target.value
+      //4. 데이터 변경
+      document.querySelector('p').innerText = value
+    })
+  </script>
+</body>
+</html>
