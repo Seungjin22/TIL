@@ -1,2 +1,0 @@
-arr = list(input().split())
-

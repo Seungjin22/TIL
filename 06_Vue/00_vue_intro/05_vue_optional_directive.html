@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <span v-text="name"></span>
+    <span>{{ name }}</span>
+
+    {{ name2 }}
+    <span v-html="name2"></span>
+
+    <p v-if="false">{{ name3 }}</p>
+    <p v-show="false">{{ name3 }}</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        name: 'justin',
+        name2: '<h1>h1태그입니다.</h1>',
+        name3: 'jason',
+      }
+    })
+  </script>
+</body>
+</html>

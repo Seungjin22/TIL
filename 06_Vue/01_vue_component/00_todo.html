@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
+    <button @click="addTodo">+</button>
+    <li v-for="todo in todos" :key="todo.id">
+      <span>{{ todo.content }}</span>
+      <button @click="removeTodo(todo.id)">x</button>
+    </li>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        todos: [],
+        newTodo: '',
+      },
+      methods: {
+				addTodo: function() {
+          if (this.newTodo.length !== 0) {
+            this.todos.push({
+              id: Date.now(),
+              content: this.newTodo,
+              completed: false,
+            })
+            this.newTodo = ''
+          }
+				},
+				// 어제는 clearCompleted로 한번에 완료된 목록 삭제
+				// 이번에는 특정 todo를 삭제!
+				removeTodo: function(todoId) {
+          this.todos = this.todos.filter(todo => {
+            return todo.id !== todoId
+          })
+				}
+      }
+    })
+  </script>
+</body>
+</html>
