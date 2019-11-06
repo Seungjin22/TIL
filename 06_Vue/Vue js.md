@@ -442,7 +442,9 @@ arrow는 무조건 상위(바로 한 단계 상위)!!
 
 ​	함수 내 함수일 때, ==> vue 인스턴스
 
-function은 무조건 전역! ==> Window
+function은 전역을 가리킨다. nested하면 window를 가리킨다!
+
+​	함수 내 함수일 때, ==> Window!
 
 
 
