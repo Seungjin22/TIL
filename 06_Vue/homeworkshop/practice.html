@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    } 
+    .blue {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <button @click="toggleColor">Toggle</button>
+    <div v-bind:class="red ? 'red' : 'blue'">빨강과 파랑을 섞으면 보라색이 됩니다.</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        red: true
+      },
+      methods: {
+        toggleColor() {
+          this.red = !this.red
+        }
+      }
+    })
+  </script>
+</body>
+</html>
