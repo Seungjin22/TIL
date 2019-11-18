@@ -1,6 +1,6 @@
 # YouTube Thumbnails Project
 
-
+### emit & props
 
 
 
@@ -55,3 +55,4 @@ VUE_APP_YOUTUBE_API_KEY=키값
 
 
 VideoDetail에서는 props에 required = true, 생략
+
