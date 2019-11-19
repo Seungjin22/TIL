@@ -57,10 +57,21 @@ REST_FRAMEWORK = {
 }
 
 JWT_AUTH = {
+    # JWT encrypt함!! (SECRET_KEY는 절대 외부 노출 금지!!)
     'JWT_SECRET_KEY': SECRET_KEY,
+    # JWT 해싱 알고리즘
+    'JWT_ALGORITHM': 'HS256',
+    # 토큰 갱신 허용 여부
+    'JWT_ALLOW_REFRESH': True,
+    # 1주일간 유효한 토큰 - default 5분
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=7),
+    # 28일마다 토큰 갱신
+    'JWT_REFRESH_EXPIRATION_DEL': datetime.timedelta(days=28),
 }
 
 MIDDLEWARE = [
+    # 최상단에 넣어주기 (django-cors-headers)
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -69,6 +80,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = 'todoback.urls'
 
@@ -139,3 +152,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = 'todos.User'
