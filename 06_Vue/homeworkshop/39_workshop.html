@@ -9,8 +9,10 @@
 <body>
   <div id="app">
     <button @click="getPostList">Get Posts!</button>
-    <ul v-for="post in posts">
-      <li>{{ post.title }}</li>
+    <ul>
+      <li v-for="(post, idx) in posts" :key="idx">
+        <b>{{ post.title }}</b> - {{ post.body }}
+      </li>
     </ul>
   </div>
 
@@ -25,10 +27,9 @@
       },
       methods: {
         getPostList() {
-          const URL = 'https://jsonplaceholder.typicode.com/posts'
-          axios.get(URL)
+          axios.get('https://jsonplaceholder.typicode.com/posts')
           .then(res =>{
-            this.posts = res.data[Math.floor(Math.random() * res.data.length)]
+            this.posts = res.data
             console.log(res)
           })
         }

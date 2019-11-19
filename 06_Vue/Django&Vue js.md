@@ -10,8 +10,13 @@ Json (JavaScript Object Notation)
 
 
 
-1. 권한 있는지 확인하는 여부
-2. 정보를 교환할 때
+1. ##### Authorization
+
+   : 권한 있는지 확인하는 여부
+
+2. ##### Information Exchanges
+
+   : 정보를 교환할 때
 
 
 
@@ -24,6 +29,27 @@ token의 type과 사용 algorithm
 
 
 라이브러리 사용하면 알아서 JWT 생성해주기 때문에 신경쓸 필요 없음
+
+
+
+#### CORS (Cross-Origin Resource Sharing)
+
+: HTTP 헤더를 사용하여 브라우저가 한 출처에서 힐행 중인 웹 어플리케이션에 대해 접근 권한을 부여하는 매커니즘
+
+- 즉, 도메인/포트가 다른 서버의 자원을 요청
+- But, 일반적으로 브라우저에서 보안을 이유로 CORS 요청 차단
+
+![image](https://user-images.githubusercontent.com/22102664/69018473-ffb35d00-09ef-11ea-91d6-5861ceed060e.png)
+
+
+
+Django 8000번 포트, Vue js 8080 포트
+
+--> 서버(Django)에서 cross-origin HTTP 요청 허가 | **whitelisting**
+
+
+
+
 
 
 

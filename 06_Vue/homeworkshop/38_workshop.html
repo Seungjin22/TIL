@@ -13,7 +13,7 @@
       </select>
       <button @click="getDogImage">Get {{ selected }} Dogs!</button>
       <div v-for="image in images">
-          <img :src="image" alt="Dog image">
+          <img :src="image" alt="Dog image" height="300px">
       </div>
       
   </div>
@@ -25,7 +25,7 @@
     const app = new Vue({
       el: '#app',
       data: {
-        selected: '1',
+        selected: 1,
         images: [],
       },
       methods: {
