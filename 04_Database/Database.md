@@ -367,3 +367,10 @@ title       content     created_at  subtitle
 title       content     2019-10-10  1
 ```
 
+
+
+
+
+중개테이블과 ManytoMany Field 차이점
+
+==> 속성 변경이나 더 섬세한 작업, 중복 가능 : 중개 테이블

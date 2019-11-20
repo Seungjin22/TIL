@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 // 로그인 뷰 가져오기
 import Login from '../views/Login.vue'
+import Register from '../views/Register.vue'
 
 // VueRouter를 사용하기 위한 코드
 Vue.use(VueRouter)
@@ -18,6 +19,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: Login
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: Register
   }
 ]
 

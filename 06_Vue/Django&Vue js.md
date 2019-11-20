@@ -671,5 +671,242 @@ import jwtDecode from 'jwt-decode'
 
 
 
+```vue
+LoginForm.vue
+
+<template>
+  <div class="login-div">
+    <div v-if="loading" class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+
+    <form v-else class="login-form" @submit.prevent="login">
+      <div v-if="errors.length" class="error-list alert alert-danger">
+        <h4>다음의 오류를 해결해주세요.</h4>
+        <hr>
+        <div v-for="(error, idx) in errors" :key="idx">{{ error }}</div>
+
+      </div>
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input
+        type="text"
+        class="form-control"
+        id="id"
+        placeholder="아이디를 입력해주세요."
+        v-model="credentials.username"
+        >
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="비밀번호를 입력해주세요."
+        v-model="credentials.password"
+        >
+      </div>
+      <button type="submit" class="btn btn-primary">로그인</button>
+    </form>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+import router from '../router'
+
+export default {
+  name: 'LoginForm',
+  data() {
+    return {
+      credentials: {
+        username: '',
+        password: '',
+      },
+      loading: false,
+      errors: [],
+    }
+  },
+  methods: {
+    login() {
+      //1. 로그인 유효성 검사가 끝나면
+      if (this.checkForm()) {
+        //2. loading의 상태를 true로 변경하고(spinner-border 돈다.)
+        this.loading = true
+        //3. credentials(username, password) 정보를 담아 Django 서버로 로그인 요청을 보낸다.
+        axios.post('http://127.0.0.1:8000/api-token-auth/', this.credentials)
+        .then(res => {
+          // 토큰 저장
+          this.$session.start()
+          this.$session.set('jwt', res.data.token)
+          // 저장 끝난 후 home으로 이동
+          router.push('/')
+          console.log(res)
+        })
+        .catch(err => {
+          this.loading = false
+          console.log(err)
+        })
+      } else {
+        console.log('로그인 실패')
+      }
+    },
+    // checkForm: Form 유효성 검사
+    checkForm() {
+      this.errors = []
+      //1. 사용자가 아이디를 입력하지 않은 경우
+      if (!this.credentials.username) {
+        this.errors.push("아이디를 입력해주세요.")
+      }
+      //2. 패스워드가 8글자 미만인 경우
+      if (this.credentials.password.length < 8) {
+        this.errors.push("비밀번호는 8글자 이상 입력해주세요.")
+      }
+      //3. 아이디와 패스워드 모두 잘 입력한 경우
+      if (this.errors.length === 0) {
+        return true
+      }
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
+```
+
+```vue
+TodoList.vue
+
+<template>
+  <div class="todo-list">
+    <div class="card" v-for="todo in todos" :key="todo.id">
+      <div class="card-body" d-flex justify-content-between>
+        <span @click="updateTodo(todo)" :class="{ complete: todo.completed }">{{ todo.title }}</span>
+        <span @click="deleteTodo(todo)">❎</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'TodoList',
+  props: {
+    todos: {
+      type: Array,
+      required: true,
+    }
+  },
+  methods: {
+    deleteTodo(todo) {
+      this.$session.start()
+      const token = this.$session.get('jwt')
+      const requestHeader = {
+        headers: {
+          Authorization: 'JWT ' + token
+        }
+      }
+      axios.delete(`http://127.0.0.1:8000/api/v1/todos/${todo.id}/`, requestHeader)
+      .then(res => {
+        console.log(res)
+        const targetTodo = this.todos.find(function(el) {
+          return el === todo
+        })
+        const idx = this.todos.indexOf(targetTodo)
+        // 인덱스 -1이면 가장 오른쪽 위치니까 0부터 되도록
+        if (idx > -1) {
+          this.todos.splice(idx, 1)
+        }
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    },
+    updateTodo(todo) {
+      this.$session.start()
+      const token = this.$session.get('jwt')
+      const requestHeader = {
+        headers: {
+          Authorization: 'JWT ' + token
+        }
+      }
+      const requestForm = new FormData()
+      requestForm.append('completed', !todo.completed)
+      requestForm.append('user', todo.user)
+      requestForm.append('id', todo.id)
+      requestForm.append('title', todo.title)
+      console.log(!todo.completed, todo.user, todo.id, todo.title)
+
+      axios.put(`http://127.0.0.1:8000/api/v1/todos/${todo.id}/`, requestForm, requestHeader)
+      .then(res => {
+        console.log(res)
+        todo.completed = !todo.completed
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
+  }
+}
+</script>
+
+<style>
+  .complete {
+    text-decoration: line-through;
+    color: rgb(112, 112, 112)
+  }
+</style>
+```
 
 
+
+
+
+
+
+container >> row >> col
+
+
+
+updated() {} 는 어떤 역할?
+
+==> watch와 비슷
+
+---
+
+
+
+# Vuex
+
+: 상태 관리를 해줌
+
+
+
+State, Getters, Mutations, Actions
+
+State: 상태 정보를 담고 있음
+
+Getters: return되는 어떤 값 (상태를 변화시키는게 X) --> computed 사용
+
+Mutations: 상태를 변화시키는 애 --> 무조건 동기적으로!
+
+Actions: 동기, 비동기 모든 로직 들어있음
+
+
+
+```text
+$ vue ui
+
+=> vuex 플러그인 설치
+```
+
+
+
+dispatch는 actions의 함수를 부를 때
+
+computed는 mutations의 함수를 부를 때
