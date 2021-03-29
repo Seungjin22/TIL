@@ -17,7 +17,7 @@ pickleshare==0.7.5
 pilkit==2.0
 Pillow==6.2.0
 prompt-toolkit==2.0.10
-Pygments==2.4.2
+Pygments==2.7.4
 python-dateutil==2.8.0
 python-decouple==3.1
 pytz==2019.2
